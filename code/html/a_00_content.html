@@ -7,18 +7,29 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <title>제목</title>
     <!-- style -->
-    <style></style>
+    <style>
+      div { width: 500px; } /* 타입선택자 */
+      .ex_part { background-color: #fff; } /* class선택자 */
+      .other_part { border-radius: 5px; }
+      #wrap { 
+        width: 800px; 
+        border-radius: 8px;
+        padding: 20px; 
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.3); } /* id선택자 */
+    </style>
   </head>
   <body>
     <!-- layout -->
-    <h1>웹기초</h1>
+    <div id="wrap">
+      <h1 class="ex_part">웹기초</h1>
 
-    <div class="ex_part">
-      <h2>기초 목차</h2>
-      <ul>
-        <li><a href="./a_01_basic.html" target="_blank">제목 및 내용</a></li>
-        <li><a href="./a_02_basic_list.html" target="_blank">리스트</a></li>
-      </ul>
+      <div class="ex_part other_part">
+        <h2>기초 목차</h2>
+        <ul>
+          <li><a href="./a_01_basic.html" target="_blank">제목 및 내용</a></li>
+          <li><a href="./a_02_basic_list.html" target="_blank">리스트</a></li>
+        </ul>
+      </div>
     </div>
 
     <!-- script -->
