@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* b_05_nth.css */
+
+.ex {
+  width: 80%; height: auto;
+  margin: auto; padding: 20px;
+  border: 1px solid #333;
+}
+ul {
+  background-color: #eee;
+}
+ul li {
+  margin-bottom: 5px; padding: 3px 0;
+}
+ul li:first-child {
+  background-color: #adf;
+}
+ul li:nth-child(1) {
+  color: #f07;
+}
+ul li:nth-child(2) {
+  color: #057;
+}
+ul li:nth-child(5) {
+  border-bottom: 1px solid #5ac;
+}
+
+ul li:nth-child(4n) { font-size: 20px; }
+ul li:nth-child(6n-2) { text-transform: uppercase; font-weight: bold; }
+ul li:nth-child(n+4):nth-child(-n+8) {
+  background-image: linear-gradient(45deg, #fac, #adf);
+}
+
+ul li:nth-last-child(-n+3) { border-radius: 5px; }
+
+/*-----------------------------------*/
+
+dt:nth-child(1) { background-color: #ddd;}
+dd:nth-child(2) { background-color: #acd;}
+
+dt:nth-of-type(2) { font-weight: bold; color: #f00; }
+dt:nth-of-type(3) { font-weight: bold; color: #500; }
+dd:nth-of-type(3) { font-size: 30px; color: #00a; }
