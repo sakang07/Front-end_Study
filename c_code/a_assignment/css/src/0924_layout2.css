@@ -1,74 +1,94 @@
 @charset "UTF-8";
 /* 0924_layout2.css */
 
+/* reset.css */
+body { margin: 0; background-color: #000070; }
+h1, h2, h3, h4, h5, h6, p, pre, address, ul, li, ol, dl, dt, dd {
+  margin: 0; padding: 0; font-size: 16px; font-family: sans-serif; }
+a { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; }
+button { border: 0; background-color: transparent; cursor: pointer; }
+
 /* wrap */
 #wrap {
-  width: 600px; height: 500px;
-  background-color: azure;
+  width: 600px; height: auto;
+  background-color: rgb(194, 194, 194);
   margin: auto; padding: 0;
 }
 .clearfix:after, .clearfix::after {
   content: ""; display: block; clear: both;
 }
+span {
+  display: block;
+  width: 100%; height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
 
 /* header */
 #header {
   width: 600px; height: 100px;
-  background-color: burlywood;
+  background-color:skyblue;
 }
 #headBox {
+  width: 100%; height: 100%;
   padding: 30px 20px 20px;
-  border-bottom: 1px solid #00AAFF;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
 }
 
 h1 {
   float: left;
-  width: 120px; height: 100px;
-  margin: 0; padding: 0;
+  width: 150px; height: 50px;
   background-color: indigo;
 }
 .navigation {
   float: right;
-  width: 400px; height: 100px;
-  background-color: ivory;
+  width: auto; height: 50px;
+  background-color: aliceblue;
 }
 .navigation > ul {
-  list-style: none;
-  width: 400px; height: 100px;
-  margin: 0; padding: 0;
-  background-color: lightslategray;
+  width: auto; height: auto;
+  margin-top: 10px;
 }
 .navigation > ul > li {
-  float: right;
+  float: left;
   display: block;
-  width: auto; height: 80px;
-  margin: 10px; padding: 0;
-  vertical-align: bottom;
+  width: 30px; height: 40px;
+  margin-left: 20px; padding: 0;
   background-color: lightgreen;
+}
+.navigation > ul > li:first-child {
+  margin: 0;
 }
 
 /* section */
+#section, #aside, #article, #content {
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
 #section {
   width: 600px; height: auto;
-  background-color: cadetblue;
+  padding: 20px 0; box-sizing: border-box;
 }
 #section > div {
   float: left;
 }
 .sect_01 {
   width: 40%; height: 300px;
-  margin: auto; padding: 0;
+  margin: auto; padding: 20px; box-sizing: border-box;
   background-color: cornflowerblue;
 }
 .sect_02 {
   width: 60%; height: 300px;
-  margin: auto; padding: 0;
+  margin: auto; padding: 20px; box-sizing: border-box;
   background-color: darkgray;
 }
 
 /* aside */
 #aside {
   width: 100%; height: auto;
+  padding: 20px 0; box-sizing: border-box;
 }
 #aside > div {
   float: left;
