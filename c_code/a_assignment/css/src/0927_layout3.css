@@ -175,10 +175,30 @@ h3 {
   margin: 28px auto;
   background-color: white;
 }
+.new_con_inner_text_01 {
+  width: 600px; height: 70px;
+  background-color: lavender;
+  margin-bottom: 30px;
+}
+.new_con_inner_text_02 {
+  width: 600px; height: 190px;
+  background-color: lavender;
+}
 .new_con_more_01, .new_con_more_02 {
   width: 630px; height: 180px;
   margin-bottom: 40px;
   background-color: white;
+}
+.new_con_more_inner_01 {
+  float: left;
+  width: 200px; height: 180px;
+  background-color: lavender;
+}
+.new_con_more_inner_02 {
+  float: right;
+  width: 380px; height: 136px;
+  margin-top: 44px;
+  background-color: lavender;
 }
 
 /* recommendedContentBox */
@@ -200,6 +220,20 @@ h3 {
 .recom_con_area > div:nth-child(1) {
   margin: 0;
 }
+.re_con_part_img {
+  width: 300px; height: 210px;
+  background-color: lavender;
+}
+.re_con_part_text {
+  width: 300px; height: 210px;
+  padding: 15px; box-sizing: border-box;
+  background-color: lavender;
+}
+.re_con_part_text span {
+  display: block;
+  width: 100%; height: 100%;
+  background-color: lavenderblush;
+}
 
 /* communityBox */
 #communityBox {
@@ -211,9 +245,27 @@ h3 {
   margin: auto; margin-top: 30px;
 }
 .commu_area_01, .commu_area_02, .commu_area_03 {
-  width: 100%; height: 164px;
-  margin-bottom: 54px;
+  width: 100%; height: 160px;
+  margin-bottom: 60px;
   background-color: thistle;
+}
+.commu_area_img {
+  float: left;
+  width: 300px; height: 160px;
+  background-color: lavender;
+}
+.commu_area_textbox_01, .commu_area_textbox_02, .commu_area_textbox_03 {
+  float: right;
+  padding-top: 24px; box-sizing: border-box;
+}
+.commu_area_text_01 {
+  width: 800px; height: 40px;
+  margin-bottom: 20px;
+  background-color: lavender;
+}
+.commu_area_text_02 {
+  width: 970px; height: 50px;
+  background-color: lavender;
 }
 
 /* miniAdBox */
@@ -231,7 +283,7 @@ h3 {
   background-color: thistle;
 }
 .mini_ad_inner_02, .mini_ad_inner_03 {
-  float: left;
+  float: right;
   width: 350px; height: 300px;
   margin-left: 24px;
   background-color: thistle;
