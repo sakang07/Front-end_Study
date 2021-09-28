@@ -17,10 +17,10 @@
 <body>
   <!-- layout -->
   <div id="wrap">
-    <div id="headBox" role="banner">
+    <header id="headBox">
       <h1>site name</h1>
-      <div class="gnb">
-        <h2 class="blind" role="navigation">global navigation</h2>
+      <nav class="gnb">
+        <h2 class="blind">global navigation</h2>
         <ul class="clearfix">
           <li>li_01</li>
           <li>li_02</li>
@@ -28,15 +28,14 @@
           <li>li_04</li>
           <li>li_05</li>
         </ul>
-      </div>
-      <div class="unb">
+      </nav>
+      <nav class="unb">
         <h2 class="blind" role="navigation">utility navigation</h2>
-      </div>
-    </div><!-- //#headBox-->
+      </nav>
+    </header><!-- //#headBox-->
 
-    <div id="adViewBox" role="region">
+    <section id="adViewBox">
       <h2 class="blind">주요 광고 내용</h2>
-
       <div class="view_outer">view_outer</div>
       <div class="view_indicator">
         <ul class="clearfix">
@@ -48,9 +47,9 @@
           <li>ad_06</li>
         </ul>
       </div>
-    </div><!-- //#adViewBox-->
+    </section><!-- //#adViewBox-->
 
-    <div id="localNavBox" role="navigation">
+    <nav id="localNavBox">
       <h2 class="blind">local navigation</h2>
       <div class="local_nav_outer">
         <ul class="clearfix">
@@ -62,11 +61,11 @@
           <li>lnb_06</li>
         </ul>
       </div>
-    </div><!-- //#localNavBox-->
+    </nav><!-- //#localNavBox-->
 
-    <div class="content_box_wrap" role="main">
+    <main class="content_box_wrap">
       <h2 class="blind">주요 내용</h2>
-      <div id="popularContentBox">
+      <article id="popularContentBox">
         <h3 class="area_title">인기 콘텐츠</h3>
         <div class="pop_con_area">
           <div class="card">
@@ -82,9 +81,9 @@
             <div class="con_part"></div>
           </div>
         </div>
-      </div><!-- //#popularContentBox-->
+      </article><!-- //#popularContentBox-->
 
-      <div id="newContentBox" class="box_space">
+      <article id="newContentBox" class="box_space">
         <h3 class="area_title">최신 콘텐츠</h3>
         <div class="new_con_area">
           <div class="new_con_title_area">
@@ -93,15 +92,15 @@
           </div>
           <div class="new_con_more_area"></div>
         </div>
-      </div><!-- //#newContentBox-->
+      </article><!-- //#newContentBox-->
 
-      <div id="recommendedContentBox" class="box_space">
+      <article id="recommendedContentBox" class="box_space">
         <h3 class="area_title">추천 콘텐츠</h3>
         <div class="recon_con_area">recon_con_area</div>
       </div><!-- //#recommendedContentBox-->
-    </div><!--//.content_box_wrap-->
+    </article><!--//.content_box_wrap-->
 
-    <div id="communityBox" class="box_space" role="main">
+    <section id="communityBox" class="box_space">
       <h2 class="area_title">community</h2>
       <div class="community_area">
         <ul>
@@ -110,17 +109,17 @@
           <li class="community_con"></li>
         </ul>
       </div>
-    </div><!-- //#communityBox-->
+    </section><!-- //#communityBox-->
 
-    <div id="miniAdBox" class="box_space" role="region">
+    <section id="miniAdBox" class="box_space">
       <h2 class="blind">보조광고</h2>
       <div class="mini_ad_outer">mini_ad_outer</div>
-    </div><!-- //#miniAdBox-->
+    </section><!-- //#miniAdBox-->
 
-    <div id="footBox" role="contentinfo">
+    <footer id="footBox" role="contentinfo">
       <h2 class="blind">site info</h2>
       <div class="foot_outer">foot_outer</div>
-    </div><!-- //#footBox-->
+    </footer><!-- //#footBox-->
 
   </div><!-- //#wrap -->
 
