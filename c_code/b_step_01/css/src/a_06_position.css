@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* a_06_position.css */
+
+/* reset.css */
+html, body {
+  margin: 0; padding: 0; border: 0
+}
+h1, h2, h3, h4, h5, h6, p, pre, address, ul, li, ol, dl, dt, dd {
+  margin: 0; padding: 0;
+  font-size: 16px; font-family: sans-serif;
+}
+a {
+  text-decoration: none; color: inherit;
+}
+ul, ol {
+  list-style: none; 
+}
+button {
+  border: 0; background-color: transparent; cursor: pointer;
+}
+header, nav, article, section, aside, menu, footer, figure, figcaption {
+  display: block; margin: 0; padding: 0;
+}
+hr {
+  margin: 0; padding: 0; border: 0; border-bottom: 1px solid #555;
+}
+
+/* common.css */
+.clearfix::after, .clearfix:after {
+  content: ""; display: block; clear: both;
+}
+.blind {
+  width: 0; height: 0; overflow: hidden;
+}
+
+/* design */
+#wrap {
+  width: 900px; height: 500px;
+  margin: auto; padding-bottom: 2000px;
+  background-color: #fdd;
+  background-image: linear-gradient(#fca, #ccf, rgba(230, 230, 230, 0.5));
+}
+hgroup {
+  width: 100%; height: 100px;
+  box-sizing: border-box; padding: 20px;
+}
+.part {
+  width: 650px; height: 120px;
+  margin: auto; margin-top: 150px; border: 1px solid #333;
+  box-sizing: border-box; padding: 8px;
+  background-color: #fff;
+}
+.part ul {
+  width: 100%; height: 100%;
+}
+.part li {
+  float: left;
+  width: 100px; height: 100px;
+  border: 1px solid #a7f;
+  text-align: center; line-height: 100px; font-weight: 800; font-size: 1.2rem;
+}
+
+.default {background-color: #5E1EF5;}
+.static {background-color: #C412C9;}
+.fixed {background-color: #F08468;}
+.absolute {background-color: #4BDFD5;}
+.relative {background-color: #824AB5;}
+
+.static { position: static; top: 1000px; left: 5000px; z-index: -1000; }
+.fixed { position: fixed; top: 0; left: 0; z-index: -1;}
+.absolute { position: absolute; bottom: 150px; left: 50px; z-index: 100;}
+.relative { position: relative; top: 50px;}
+
+
+.ex_part {
+  width: 80%; height: 400px;
+  margin: 100px auto; padding: 30px;
+  border: 2px solid #567;
+}
+
+/* 화면의 가운데 배치 */
+.view_center {
+  position: fixed;
+  /* 방법1 
+  top: calc(50% - 150px); left: calc(50% - 250px);
+  width: 500px; height: 300px; */
+  /* 방법2 
+  top: 50%; left: 50%;
+  margin-top: -150px; margin-left: -250px;
+  width: 500px; height: 300px; */
+  /* 방법 */
+  top: 0; left: 0; right: 0; bottom: 0; z-index: 1;
+  width: 500px; height: 300px;
+  margin: auto;
+  border: 4px solid #777; border-radius: 5px;
+  background-color: #fff;
+}
+
+  .close {
+    position: absolute;
+    width: 40px; height: 40px;
+    right: -20px; top: -20px;
+  }
+  .close button {
+    width: 100%; height: 100%;
+    margin: 0; border: 0; 
+    background-color: #0ac;
+    border-radius: 100%;
+  }
+
+.view_bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.3); 
+}
+
+/* .ex_part {
+  position: absolute;
+}
+
+.btn {
+  bottom: 50px; left: 500px;
+  display: block;
+  margin: auto;
+  width: 100px;
+
+  background-color: #a7f;
+} */
+
+.btn {
+  position: fixed; z-index: 200; left: 50%; bottom: 50px;
+  width: 100px; height: 100px; margin-left: 500px;
+  background-color: #adf;
+}
+
+.btn button {
+  background-color: transparent;
+  bottom: 0; cursor: pointer; margin: 0;
+}
