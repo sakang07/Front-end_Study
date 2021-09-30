@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/* 0930_practice2.css */
+
+/* reset.css */
+html, body {
+  margin: 0; padding: 0; border: 0;
+}
+h1, h2, h3, h4, h5, h6, p, pre, address, ul, li, ol, dl, dt, dd {
+  margin: 0; padding: 0;
+  font-size: 16px; font-family: sans-serif;
+}
+a {
+  text-decoration: none; color: inherit;
+}
+ul, ol {
+  list-style: none; 
+}
+button {
+  border: 0; background-color: transparent; cursor: pointer;
+}
+header, nav, article, section, aside, menu, footer, figure, figcaption {
+  display: block; margin: 0; padding: 0;
+}
+
+/* common.css */
+.clearfix::after, .clearfix:after {
+  content: ""; display: block; clear: both;
+}
+.blind {
+  width: 0; height: 0; overflow: hidden;
+}
+
+/* design */
+#wrap {
+  margin: auto;
+  width: 1200px; height: auto;
+  background-color: #eee;
+}
+
+/* #headBox */
+#headBox {
+  width: 100%; height: 100px;
+  background-color: #80D74D;
+  box-sizing: border-box; padding: 10px;
+}
+  .logo {
+    float: left;
+    display: block;
+    width: 200px; height: 80px;
+    background-color: #fff;
+  }
+  #naviBox {
+    float: right;
+    width: 640px; height: 50px;
+    margin-top: 14px;
+    background-color: #fff;
+  }
+  #naviBox li {
+    float: left;
+    display: block;
+    width: 160px; height: 50px;
+    box-sizing: border-box; border: 1px solid #fff;
+    background-color: #777;
+  }
+
+
+
+  /* #naviBox li:last-of-type {
+    width: 640px; height: auto;
+    border: 0;
+    background-color: #8F504C;
+  }
+    #naviBox li > span {
+      display: block;
+      float: left;
+      width: 160px; height: 40px;
+      background-color: aqua;
+    } */
+    
+    /* #naviBox li:nth-child(1):hover ~ li:nth-child(4):hover span {
+      display: none;
+    } */
+
+/* #viewBox */
+#viewBox {
+  width: 100%; height: 300px;
+  background-color: #39A26E;
+}
+
+/* #contentBox */
+#contentBox {
+  width: 100%; height: 200px;
+  background-color: #E7D24D;
+}
+
+  /* #noticeBox */
+  #noticeBox {
+    float: left;
+    width: 33.333333%; height: 200px;
+    background-color: #6EDB99;
+  }
+    .notice_inner {
+      width: 100%; height: 100%;
+    }
+    .gallery_inner {
+      width: 100%; height: 100%;
+    }
+
+  /* #bannerBox */
+  #bannerBox {
+    float: left;
+    width: 33.333334%; height: 200px;
+    background-color: #8165A9;
+  }
+
+  /* #infoBox */
+  #infoBox {
+    float: right;
+    width: 33.3333%; height: 200px;
+    background-color: #BE0698;
+  }
+
+/* #footBox */
+#footBox {
+  width: 100%; height: 100px;
+  background-color: #45A15B;
+}
+  #logo2 {
+    float: left;
+    width: 200px; height: 100px;
+    background-color: #1BEF4B;
+  }
+  #coptright {
+    float: left;
+    width: 100%; height: 100px;
+    background-color: #64C831;
+  }
+  #sns {
+    float: right;
+    width: 200px; height: 100px;
+    background-color: #E7E690;
+  }

@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* c_01_web.css */
+
+/* design */
+#wrap {
+  width: 1200px; height: auto;
+  margin: auto;
+  background-color: #ddd;
+}
+
+#headBox {
+  width: 100%; height: 100px;
+  box-sizing: border-box; padding: 30px 20px;
+  background-color: #80D74D;
+}
+  h1 {
+    float: left;
+    width: 200px; height: 40px;
+    background-color: #555;
+  }
+  #navigation {
+    float: right;
+    width: 600px; height: 40px;
+    background-color: #777;
+  }
+
+#viewBox {
+  width: 100%; height: 300px;
+  background-color: #39A26E;
+}
+#conBox {
+  width: 100%; height: 200px;
+  background-color: #E7D24D;
+}
+  .con_inner_01 {
+    float: left;
+    width: 33.333333%; height: 100%;
+    background-color: #ccc;
+  }
+  .con_inner_02 {
+    float: left;
+    width: 33.333334%; height: 100%;
+    background-color: #aaa;
+  }
+  .con_inner_03 {
+    float: right;
+    width: 33.333333%; height: 100%;
+    background-color: #eee;
+  }
+
+#footBox {
+  width: 100%; height: 100px;
+  box-sizing: border-box; padding: 30px 20px;
+  background-color: #45A15B;
+}
+  #footBox > h2 {
+    float: left;
+    width: 200px; height: 40px;
+    background-color: #ccc;
+  }
+  address {
+    float: left;
+    width: 600px; height: 40px;
+    margin-left: 100px;
+    background-color: #aaa;
+  }
+  .social {
+    float: right;
+    width: 200px; height: 40px;
+    background-color: #ccc;
+  }
