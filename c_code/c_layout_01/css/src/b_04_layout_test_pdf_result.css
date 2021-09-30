@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/* b_04_layout_test_pdf_result.css */
+
+/* reset.css */
+html, body {
+  margin: 0; padding: 0; border: 0;
+}
+h1, h2, h3, h4, h5, h6, p, pre, address, ul, li, ol, dl, dt, dd {
+  margin: 0; padding: 0;
+  font-size: 16px; font-family: sans-serif;
+}
+a {
+  text-decoration: none; color: inherit;
+}
+ul, ol {
+  list-style: none; 
+}
+button {
+  border: 0; background-color: transparent; cursor: pointer;
+}
+header, nav, article, section, aside, menu, footer, figure, figcaption {
+  display: block; margin: 0; padding: 0;
+}
+
+/* common.css */
+.clearfix::after, .clearfix:after {
+  content: ""; display: block; clear: both;
+}
+.blind {
+  width: 0; height: 0; overflow: hidden;
+}
+
+/* design */
+.wrap {
+  position: relative;  
+  width: 800px; height: 600px; 
+  margin: 50px auto; 
+  background-color: #ff00aa;
+}
+
+.q_8 .modal {
+  top: 0; left: 0;
+  width: 500px; height: 150px;
+  margin-left: 150px;
+  background-color: #00aaff;
+}
+
+.q_9 .side_indicator {
+  position: absolute;
+  top:125px; right: 30px;
+  width: 50px; height: auto;
+  background-color: #0af;
+
+  /* 방법 1 */
+  /* top: 0; margin-top: 125px; */
+
+  /* 방법 2 */
+  top: 50%; margin-top: -175px;
+}
+
+.q_9 ul {
+  width: 100%; height: auto;
+  padding-top: 10px; padding-bottom: 10px;
+}
+
+.q_9 li {
+  width: 30px; height: 30px;
+  margin: 0 auto; margin-bottom: 30px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 30px;
+  background-color: #fff;
+}
+
+.q_9 li:last-child {
+  margin-bottom: 0;
+}
