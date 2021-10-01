@@ -49,19 +49,34 @@ header, nav, article, section, aside, menu, footer, figure, figcaption {
     background-color: #F954D3;
   }
   #navigation {
+    position: relative;
     float: right;
     width: 752px; height: 40px;
-    background-color: #13AD89;
   }
-    .gnb 
     .gnb li {
       float: left;
       width: 180px; height: 40px;
       box-sizing: border-box; margin: 0 4px; padding: 10px 30px;
       background-color: #fff;
       text-align: center;
-
     }
+    .sub_menu {
+      display: block;
+      width: 100%; height: auto;
+    }
+    .sub_menu ul {
+      float: left;
+      width: 188px; height: auto;
+      box-sizing: border-box; 
+      background-color: #888;
+    }
+    .gnb .action {
+      display: none;
+    }
+    .gnb:hover {
+      display:block;
+    }
+
 
 /* #viewBox */
 #viewBox {

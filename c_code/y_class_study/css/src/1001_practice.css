@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/* 1001_practice.css */
+
+/* reset.css */
+html, body {
+  margin: 0; padding: 0; border: 0;
+}
+h1, h2, h3, h4, h5, h6, p, pre, address, ul, li, ol, dl, dt, dd {
+  margin: 0; padding: 0;
+  font-size: 16px; font-family: sans-serif;
+}
+a {
+  text-decoration: none; color: inherit;
+}
+ul, ol {
+  list-style: none; 
+}
+button {
+  border: 0; background-color: transparent; cursor: pointer;
+}
+header, nav, article, section, aside, menu, footer, figure, figcaption {
+  display: block; margin: 0; padding: 0;
+}
+
+/* common.css */
+.clearfix::after, .clearfix:after {
+  content: ""; display: block; clear: both;
+}
+.blind {
+  width: 0; height: 0; overflow: hidden;
+}
+
+/* design */
+#wrap {
+  overflow: hidden;
+  width: 320px; height: 640px;
+  margin: auto;
+  background-color: #E81E2A;
+}
+
+/* #headBox */
+#headBox {
+  width: 100%; height: 60px;
+  border-bottom: 1px solid #171717;
+  background-color: #E81E2A;
+}
+  /* #gnb */
+  #gnb {
+    position: relative;
+    float: left;
+    width: auto; height: auto;
+  }
+  #gnb > div {
+    width: 60px; height: 60px;
+    box-sizing: border-box; border: 1px solid #171717;
+    background-color: #fff;
+  }
+  #gnb > ul {
+    position: fixed;
+    width: 230px; height: 550px;
+    box-sizing: border-box; border: 1px solid #171717;
+    background-color: #fff;
+  }
+    .profile_area {
+      width: 100%; height: 20%;
+      border-bottom: 1px solid #171717;
+    }
+      .profile_area {
+        width: 60px; height: 60px;
+        
+        background-color: dodgerblue;
+      }
+    .menu_area {
+      width: 100%; height: 50%;
+      border-bottom: 1px solid #171717;
+    }
+    .setting_area {
+      width: 100%; height: 30%;
+    }
+  h1 {
+    float: left;
+    font-size: 1.5rem;
+    width: auto; height: auto;
+    margin: 14px;
+  }
+  /* #unb */
+  #unb {
+    float: right;
+    width: auto; height: auto;
+    margin: 10px 12px;
+    background-color: dodgerblue;
+  }
+    #unb li {
+      float: left;
+      width: 26px; height: 26px;
+      margin: 4px;
+      background-color: #fff;
+    }
+
+
+  /* #contWrap */
+  #contWrap {
+    width: 90%; height: 100%;
+    margin: 30px auto;
+    background-color: #fff;
+  }
+  #contWrap > section {
+    margin-bottom: 30px;
+  }
+
+  /* #contBox */
+  #contBox {
+    width: 100%; height: 200px;
+    background-color: #4E76A3;
+  }
+
+  /* #noticeBox */
+  #noticeBox {
+    width: 100%; height: 80px;
+    background-color: #1DF8A0;
+  }
+
+  /* #imgBox */
+  #imgBox {
+    width: 100%; height: auto;
+    background-color: #D7A0F1;
+  }
+    #imgBox > div {
+      float: left;
+      width: 130px; height: 130px;
+      margin: 7px;
+      background-color: #eee;
+    }
+    #imgBox > div:nth-child(1), #imgBox > div:nth-child(2) { margin-top: 0;}

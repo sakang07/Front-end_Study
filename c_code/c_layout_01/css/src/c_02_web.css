@@ -4,26 +4,170 @@
 /* design */
 #wrap {
   width: 1200px; height: auto; min-height: 700px;
-  margin: auto;
-  background-color: #ddd;
+  margin: auto; 
+  /* padding-top: 100px; */
 }
 /* #headBox */
 #headBox {
+  position: fixed; top: 0; left: 0; z-index: 1500;
   width: 100%; height: 100px;
-  background-color: #DC3DF9;
+  padding: 0 20px; padding-top: 60px;
+  background-color: rgba(200,200,200,0.5)
 }
+  .head_wrapper {
+    width: 1200px; height: 40px;
+    margin: auto;
+  }
+
+    h1 {
+      float: left;
+      width: 200px; height: 40px;
+      background-color: #afa;
+    }
+    #navigation {
+      float: right;
+      width: 400px; height: auto;
+    }
+      #navigation a {
+        display: block;
+        width: 100%; height: 30px;
+        text-align: center; line-height: 30px;
+      }
+      #navigation > ul {
+        width: 100%; height: auto;
+        background-color: #999;
+      }
+        #navigation > ul > li {
+          float: left;
+          width: 25%; height: auto;
+          padding: 0 5px; 
+        }
+          .nav_title {
+            width: 100%; height: 40px;
+            background-color: #fff;
+          }
+            .nav_title a {
+              display: block;
+              width: 100%; height: 100%;
+              text-align: center; line-height: 30;
+            }
+          .nav_list {
+            display: none;
+            width: 100%; height: auto;
+            color: #fff;
+            background-color: #333;
+          }
+            .nav_list li {
+              width: 100%; height: 40px;
+              margin-bottom: 10px;
+            }
+            .nav_list a {
+              display: block;
+              width: 100%; height: 100%;
+              text-align: center;
+            }
+      #navigation:hover .nav_list {
+        display: block;
+      }
+      .nav_title:hover {
+        display: block;
+        background-color: #171717; color: #fff;
+      }
+      /* .nav_title:hover + .nav_list {
+        display: block;
+      } */
+
 /* #viewBox */
 #viewBox {
   width: 100%; height: 300px;
-  background-color: #A75395;
+  background-color: #aaa;
 }
+
 /* #contentBox */
 #contentBox {
   width: 100%; height: 200px;
-  background-color: #321C33;
+  background-color: #ddd;
 }
+.cont_area {
+  float: left;
+  width: 400px; height: 200px;
+  padding: 10px 30px; 
+}
+  #noticeArea {
+    background-color: #61F217;
+  }
+    .con_part {
+      width: 100%; height: 150px;
+      border: 1px solid #777;
+    }
+      .con_part ul {
+        width: 100%; height: 150px;
+      }
+    #noticeArea ul {
+      list-style: decimal;
+      padding: 10px; padding-left: 30px; box-sizing: border-box; 
+    }
+      #noticeArea li {
+        width: 100%; height: 25px; margin-bottom: 10px;
+      }
+
+  #galleryArea {
+    counter-reset: gal_li;
+    background-color: #ADB671;
+  }
+    #galleryArea li::before {
+      counter-increment: gal_li;
+      content: counter(gal_li) ". ";
+    }
+    #galleryArea li {
+      float: left;
+      width: 100px; height: 150px;
+      margin-right: 18px;
+      background-color: #fff;
+    }
+    #galleryArea li:last-of-type {
+      margin: 0;
+    }
+
+  #commercialArea {
+    background-color: #96A76B;
+  }
+
+  /* 탭메뉴설정 가이드 */
+  .con_part {
+    display: none;
+  }
+  .con_area > h3:hover + .con_part {
+    display: none;
+  }
+
+  /* #otherBox */
+  #otherBox {
+    width: 900px; height: 800px;
+    margin: 30px auto;
+    background-image: linear-gradient(#aaf , #faa );
+  }
+
 /* #footBox */
 #footBox {
   width: 100%; height: 100px;
+  padding: 30px 20px; padding-bottom: 50px;
   background-color: #E92072;
 }
+  #footBox > h2 {
+    float: left;
+    width: 200px; height: 40px;
+    background-color: #15BDB4;
+  }
+  address {
+    float: left;
+    width: 600px; height: 30px;
+    margin-top: 10px; margin-left: 100px;
+    background-color: #607915;
+  }
+  .family {
+    float: right;
+    width: 200px; height: 30px;
+    margin-top: 10px;
+    background-color: #621B74;
+  }

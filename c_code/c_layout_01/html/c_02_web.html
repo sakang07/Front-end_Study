@@ -21,53 +21,94 @@
   <!-- layout -->
   <div id="wrap">
     <header id="headBox">
-      <h1>site</h1>
-      <nav id="navigation">
-        <h2 class="blind">navigation</h2>
-        <div class="gnb">
+      <div class="head_wrapper">
+        <h1>site</h1>
+        <nav id="navigation">
+          <h2 class="blind">navigation</h2>
           <ul>
-            <li><a href="#">재단소개</a></li>
-            <li><a href="#">후원하기</a></li>
-            <li><a href="#">자료실</a></li>
-            <li><a href="#">스토리</a></li>
+            <li>
+              <div class="nav_title"><a href="#">재단소개</a></div>
+              <ul class="nav_list">
+                <li><a href="#">설립취지</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="nav_title"><a href="#">후원하기</a></div>
+              <ul class="nav_list">
+                <li><a href="#">국내후원</a></li>
+                <li><a href="#">국외후원</a></li>
+                <li><a href="#">맞춤후원</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="nav_title"><a href="#">자료실</a></div>
+              <ul class="nav_list">
+                <li><a href="#">서식자료실</a></li>
+                <li><a href="#">사진자료실</a></li>
+                <li><a href="#">후원양식</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="nav_title"><a href="#">스토리</a></div>
+              <ul class="nav_list">
+                <li><a href="#">웹진</a></li>
+                <li><a href="#">보고서</a></li>
+                <li><a href="#">나의 후원</a></li>
+              </ul>
+            </li>
           </ul>
-          <div class="sub_menu">
-            <ul>
-              <li>li_01</li>
-              <li>li_02</li>
-              <li>li_03</li>
-              <li>li_04</li>
-              <li>li_05</li>
-              <li>li_06</li>
-              <li>li_07</li>
-              <li>li_08</li>
-              <li>li_09</li>
-              <li>li_10</li>
-              <li>li_11</li>
-              <li>li_12</li>
-            </ul>
-          </div>
-        </div><!-- //.gnb -->
-      </nav>
+        </nav>
+      </div><!-- //.head_wrapper-->
     </header><!-- //#headBox -->
     <section id="viewBox">
       <h2>advertisement area</h2>
     </section><!-- //#viewBox -->
-    <div class="contentBox">
-      <h2>main content box</h2>
-      <article id="noticeBox">
+    <main id="contentBox">
+      <h2 class="blind">main content box</h2>
+      <article id="noticeArea" class="cont_area">
         <h3>notice</h3>
-      </article><!-- //#noticeBox -->
-      <article id="galleryBox">
-        <h2>gallery</h2>
-      </article><!-- //#galleryBox -->
-      <article id="bannerBox">
-        <h2>banner</h2>
-      </article><!-- //#bannerBox -->
-    </div><!-- contentBox -->
+        <div class="con_part">
+          <ul>
+            <li>공지사항 Lorem ipsum dolor sit.</li>
+            <li>공지사항 Lorem ipsum dolor sit.</li>
+            <li>공지사항 Lorem ipsum dolor sit.</li>
+            <li>공지사항 Lorem ipsum dolor sit.</li>
+          </ul>
+        </div>
+      </article><!-- //#noticeArea -->
+      <article id="galleryArea" class="cont_area">
+        <h3>gallery</h3>
+        <div class="con_part">
+          <ul>
+            <li>gallery_01</li>
+            <li>gallery_02</li>
+            <li>gallery_03</li>
+          </ul>
+        </div>
+      </article><!-- //#galleryArea -->
+      <article id="commercialArea" class="cont_area">
+        <h3>banner</h3>
+      </article><!-- //#commercialArea -->
+    </main><!-- contentBox -->
+
+    <aside id="otherBox"></aside><!-- //#otherBox -->
+
     <footer id="footBox">
       <h2>site information</h2>
+      <address></address>
+      <div class="family"></div>
     </footer><!-- //#footBox -->
+
+
+    <div class="test">
+      <dl>
+      <dt></dt>
+      <dd></dd>
+    </dl>
+  </div>
+
 
   </div><!-- //#wrap -->
 
