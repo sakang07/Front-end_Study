@@ -117,6 +117,7 @@
       background-color: #fa0;
     }
     .con_inner_03 button:focus { /* 마우스 눌렀을 때 */
+      outline: 0;
       border-bottom: 3px solid #f06;
       box-shadow: 3px 3px 3px #333;
       /* box-shadow: x y blur color; */

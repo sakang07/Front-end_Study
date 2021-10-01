@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* c_02_web.css */
+
+/* design */
+#wrap {
+  width: 1200px; height: auto; min-height: 700px;
+  margin: auto;
+  background-color: #ddd;
+}
+/* #headBox */
+#headBox {
+  width: 100%; height: 100px;
+  background-color: #DC3DF9;
+}
+/* #viewBox */
+#viewBox {
+  width: 100%; height: 300px;
+  background-color: #A75395;
+}
+/* #contentBox */
+#contentBox {
+  width: 100%; height: 200px;
+  background-color: #321C33;
+}
+/* #footBox */
+#footBox {
+  width: 100%; height: 100px;
+  background-color: #E92072;
+}

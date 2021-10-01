@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* 1001_practice3.css */
+
+/* reset.css */
+html, body {
+  margin: 0; padding: 0; border: 0;
+}
+h1, h2, h3, h4, h5, h6, p, pre, address, ul, li, ol, dl, dt, dd {
+  margin: 0; padding: 0;
+  font-size: 16px; font-family: sans-serif;
+}
+a {
+  text-decoration: none; color: inherit;
+}
+ul, ol {
+  list-style: none; 
+}
+button {
+  border: 0; background-color: transparent; cursor: pointer;
+}
+header, nav, article, section, aside, menu, footer, figure, figcaption {
+  display: block; margin: 0; padding: 0;
+}
+
+/* common.css */
+.clearfix::after, .clearfix:after {
+  content: ""; display: block; clear: both;
+}
+.blind {
+  width: 0; height: 0; overflow: hidden;
+}
+
+/* design */
+#wrap {
+  width: 1200px; height: auto;
+  margin: auto;
+}
+
+/* #headBox */
+#headBox {
+  width: 100%; height: 100px;
+  box-sizing: border-box; padding: 30px 20px;
+  background-color: #A325DF;
+}
+  h1 {
+    float: left;
+    display: block;
+    width: 200px; height: 40px;
+    background-color: #F954D3;
+  }
+  #navigation {
+    float: right;
+    width: 752px; height: 40px;
+    background-color: #13AD89;
+  }
+    .gnb 
+    .gnb li {
+      float: left;
+      width: 180px; height: 40px;
+      box-sizing: border-box; margin: 0 4px; padding: 10px 30px;
+      background-color: #fff;
+      text-align: center;
+
+    }
+
+/* #viewBox */
+#viewBox {
+  width: 100%; height: 300px;
+  background-color: #12502F;
+}
+
+/* #mainBox */
+#mainBox {
+  width: 100%; height: 200px;
+  background-color: #8E63CD;
+}
+
+/* #noticeBox */
+#noticeBox {
+  width: 100%; height: 100%;
+  background-color: #AA2FC7;
+}
+
+/* #galleryBox */
+#galleryBox {
+  width: 100%; height: 100%;
+  background-color: #EAECB7;
+}
+
+/* #bannerBox */
+#bannerBox {
+  width: 100%; height: 100%;
+  background-color: #F3BA9F;
+}
+/* #bannerBox > .action {
+  display: block;
+} */
+  /* .modal */
+  .modal {
+    display: none;
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+  }
+  .modal_message {
+      position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: 2000;
+      width: 500px; height: 300px;
+      margin: auto; box-sizing: border-box; padding: 30px;
+      background-color: #fff;
+    }
+    .modal_message > h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .modal_close {
+      position: absolute; bottom: 30px; right: 30px;
+      width: 60px; height: 30px;
+      box-sizing: border-box; padding: 4px 14px; border: 1px solid #000;
+    }
+    .modal_bg {
+      position: fixed; top: 0; left: 0; bottom: 0; right: 0;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+/* #footBox */
+#footBox {
+  width: 100%; height: 100px;
+  background-color: #B9A95A;
+}
