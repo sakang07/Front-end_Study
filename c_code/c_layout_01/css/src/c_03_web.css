@@ -48,7 +48,6 @@
     display: block;
     width: 100%; height: 100%;
     text-align: center; line-height: 36px;
-    background-color: #ffa;
   }
   .navigation dd {
     display: none;
@@ -59,6 +58,10 @@
   }
   .navigation li:hover dd {
     display: block;
+  }
+  .navigation li:hover dt {
+    color: #fff;
+    background-color: #333;
   }
   .navigation dd a {
     display: block;
@@ -84,8 +87,83 @@
 /* #contBox */
 #contBox {
   height: 200px;
-  background-color: #41FC2D;
 }
+  .notice_gallery {
+    float: left;
+    width: 65%; height: 100%;
+    padding: 10px;
+  }
+    .notice_gallery dl {
+      position: relative;
+      width: 100%; height: 100%;
+      background-color: #eee;
+    }
+    
+    .notice_gallery dt {
+      float: left;
+      width: 45%; height: 25px;
+      border-right: 1px solid #333;
+      background-color: #fd0;
+    }
+    .notice_gallery dt:last-of-type {
+      border: 0;
+    }
+    .notice_gallery dd {
+      display: none;
+      position: absolute; left: 0; top: 25px;
+      width: 100%; height: calc(100% - 25px);
+    }
+    dd.notice {
+      background-color: #aff;
+    }
+    dd.gallery {
+      background-color: #faa;
+    }
+    dt.action + dd {
+      display: block;
+    }
+
+  .location_link {
+    float: left;
+    width: 35%; height: 100%;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+    .location_link button {
+      width: 100%; height: 100%;
+      background-color: #575757; color: #fff;
+    }
+    .modal_area {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1500;
+      margin: auto;
+    }
+    .modal_message {
+      position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+      width: 700px; height: 400px;
+      padding: 30px; border: 1px solid #333; margin: auto; border-radius: 0.3rem;
+      background-color: #fff; box-shadow: 5px 5px 5px rgba(51,51,51,0.7);
+    }
+    .modal_message h4 {
+      margin: 10px 0;
+      font-size: 1.3rem;
+    }
+    .modal_message .close {
+      position: absolute; right: 0; bottom: 0;
+      padding: 30px;
+    }
+    .modal_message .close button {
+      width: 100px; height: 40px;
+      border-radius: 0.3rem;
+      background-color: #ccc;
+    }
+    .modal_message .close button:hover {
+      background-color: #000;
+    }
+    .modal_bg {
+      width: 100%; height: 100%;
+      background-color: rgba(51,51,51,0.7);
+    }
 
 /* #footBox */
 #footBox {
