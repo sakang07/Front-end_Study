@@ -72,7 +72,7 @@ header, nav, article, section, aside, menu, footer, figure, figcaption {
     }
     .gnb .action {
       display: none;
-    }
+    } 
     .gnb:hover {
       display:block;
     }
