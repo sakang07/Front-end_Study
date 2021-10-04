@@ -88,6 +88,7 @@
       <div class="location_link">
         <h3 class="blind">바로가기</h3>
         <button type="button">모달 바로가기</button>
+        <!-- modal window -->
         <div class="modal_area">
           <div class="modal_message">
             <h4>바로가기 기능 제목</h4>
@@ -104,6 +105,24 @@
   </div><!-- //#wrap -->
 
   <!-- script -->
-  <script></script>
+  <script>
+    // ES5
+    // var modalArea = document.getElementsByClassName('modal_area')[0];
+    // var closeBtn = document.getElementsByClassName('close')[0];
+
+    // closeBtn.addEventListener('click', function(e) {
+    //   e.preventDefault();
+    //   modalArea.style.display = "none";
+    // }); 
+
+      //ES6
+    const modalArea = document.querySelector('.modal_area');
+    const closeBtn = document.querySelector('.close');
+      closeBtn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        modalArea.style.display = 'none';
+      });
+
+  </script>
 </body>
 </html>

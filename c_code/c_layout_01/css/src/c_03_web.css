@@ -164,6 +164,9 @@
       width: 100%; height: 100%;
       background-color: rgba(51,51,51,0.7);
     }
+    /* .location_link > button:hover + .modal_area {
+      display: block;
+    } */
 
 /* #footBox */
 #footBox {
