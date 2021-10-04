@@ -17,8 +17,63 @@
 #headBox {
   float: left;
   width: 250px; height: 650px;
+  box-sizing: border-box; padding: 10px;
   background-color: #8B763F;
 }
+  h1 {
+    width: 100%; height: 50px;
+    margin-bottom: 20px;
+    background-color: #999;
+  }
+  h1 a {
+    display: block;
+    width: 100%; height: 100%;
+  }
+  .navigation {
+    width: 100%; height: auto;
+  }
+  .navigation li {
+    width: 100%; height: 40px;
+    box-sizing: border-box; border: 1px solid #777;
+  }
+  .navigation dl {
+    width: 100%; height: 100%;
+  }
+  .navigation dt {
+    width: 100%; height: 100%;
+    padding: 3px; box-sizing: border-box;
+    background-color: #faa;
+  } 
+  .navigation dt a {
+    display: block;
+    width: 100%; height: 100%;
+    text-align: center; line-height: 36px;
+    background-color: #ffa;
+  }
+  .navigation dd {
+    display: none;
+    width: 100%; height: auto; min-height: 140px;
+    margin-left: 100%;
+    transform: translateY(-50%);
+    background-color: #333;
+  }
+  .navigation li:hover dd {
+    display: block;
+  }
+  .navigation dd a {
+    display: block;
+    width: 100%; height: auto;
+    color: #fff; font-weight: 700;
+    margin-bottom: 10px; box-sizing: border-box; padding: 10px;
+  }
+  .navigation dd a:hover {
+    color: #333;
+    background-color: #fff;
+  }
+  .navigation dd a:focus {
+    color: #f06; font-size: 1.1rem;
+    background-color: #ddd;
+  }
 
 /* #viewBox */
 #viewBox {
