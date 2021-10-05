@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/* 1005_practice5.css */
+
+/* design */
+#wrap {
+  width: 1000px; height: auto;
+}
+/* headBox */
+#headBox {
+  float: left;
+  width: 200px; height: 650px;
+  padding: 20px 10px;
+  background-color: #BFDD4B;
+}
+  h1 > a > span {
+    display: block;
+    width: 180px; height: 80px;
+    background-color: #fff;
+  }
+  /* gnb */
+  #gnb {
+    width: 180px; height: auto;
+    margin-top: 20px;
+  }
+    #gnb li {
+      width: 180px; height: auto;
+      margin-bottom: 6px;
+    }
+    #gnb li:last-of-type {
+      margin-bottom: 0;
+    }
+    #gnb li:hover dd {
+      display: block;
+    }
+      #gnb dt {
+        width: 180px; height: 40px;
+        text-align: center; line-height: 44px; font-weight: 700; font-size: 18px;
+        background-color: #fa0;
+      }
+      #gnb dt:hover {
+        margin-bottom: 0;
+        color: #fff; background-color: #171717;
+      }
+      #gnb dd {
+        display: none;
+        width: auto; height: auto;
+        background: #fff;
+      }
+      #gnb dd a {
+        display: block;
+        width: 180px; height: 30px;
+        margin-bottom: 4px;
+        text-align: center; line-height: 34px;
+      }
+      #gnb dd a:hover {
+        color: #fff; background-color: #171717;
+      }
+
+/* viewBox */
+#viewBox {
+  float: left;
+  width: 800px; height: 350px;
+  background-color: #A2FFA3;
+}
+
+/* contBox */
+#contBox {
+  float: left;
+  width: 800px; height: 200px;
+  background-color: #942A66;
+}
+
+/* noticeGalleryBox */
+#noticeGalleryBox {
+  float: left;
+  width: 33.333333%; height: 100%;
+  padding: 8px;
+  background-color: #FE1936;
+}
+#noticeGalleryBox dt {
+  float: left;
+  width: 66px; height: 30px;
+  margin: 4px;
+  text-align: center; line-height: 34px;
+  background: #fff;
+}
+#noticeGalleryBox dd {
+  width: 100%; height: 180px;
+  background-color: #fff;
+}
+.notice {
+
+}
+
+.gallery {
+
+}
+
+/* bannerBox */
+#bannerBox {
+  float: left;
+  width: 33.333334%; height: 100%;
+  background-color: #A82A3E;
+
+}
+
+/* sponsorBox */
+#sponsorBox {
+  float: left;
+  width: 33.333333%; height: 100%;
+  background-color: #A26237;
+
+}
+
+
+/* footBox */
+#footBox {
+  float: left;
+  width: 800px; height: 100px;
+  background-color: #313622;
+}
+
+  .family {
+
+  }

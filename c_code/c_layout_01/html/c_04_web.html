@@ -74,25 +74,25 @@
       <h2 class="blind">content area</h2>
       <article id="noticeGalleryBox">
         <h3 class="blind">notice and gallery</h3>
-        <dl>
-          <dt class="notice">공지사항</dt>
-          <dd class="notice">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </dd>
-          <dt class="gallery">갤러리</dt>
-          <dd class="gallery">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </dd>
-        </dl>
+        <!-- ul.tab_title>li*2>button[type=button] -->
+        <ul class="tab_title">
+          <li><button type="button">공지사항</button></li>
+          <li><button type="button">갤러리</button></li>
+        </ul>
+        <div class="tab_content">
+            <div class="notice">
+              <h3>공지사항</h3>
+              <!-- ul>li*5>a[href=#]{lorem5} -->
+              <ul>
+                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+              </ul>  
+            <div class="gallery" hidden>갤러리</div>
+          </div>
+        </div>
       </article>
       <article id="bannerBox">
         <h3>banner</h3>
@@ -102,9 +102,9 @@
       </article>
     </article><!-- //#contBox -->
     <footer id="footBox">
-      <h2 class="blind">site information</h2>
-      <div class="family"></div>
-      <address></address>
+      <h2>site information</h2>
+      <div class="info_nav"></div>
+      <address><span class="blind">copyright</span>&copy; web tutorial.</address>
     </footer><!-- //#footBox -->
 
   </div><!-- //#wrap -->
