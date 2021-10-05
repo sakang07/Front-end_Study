@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/* c_04_web.css */
+
+/**
+[] logo : 200px x 40px, 텍스트로 대체.
+[] navigation 마우스 올리면 하이라이트, 벗어나면 해제.
+
+*/
+
+/* design */
+#wrap {
+  width: 1000px; height: 650px;
+  margin: auto;
+}
+/* headBox */
+#headBox {
+  float: left;
+  width: 250px; height: 650px;
+  padding: 20px 25px;
+  background-color: #B29A44;
+}
+h1 {
+  width: 200px; height: 40px;
+  background-color: #aaa;
+  margin-bottom: 20px;
+}
+h1 a {
+  display: block;
+  width: 100%; height: 100%;
+  text-align: center; line-height: 40px;
+  font-size: 1.2rem;
+}
+
+.gnb {}
+.gnb ul {}
+.gnb li {}
+.gnb dl {}
+.gnb dt {}
+.gnb dt a {}
+.gnb dd {}
+.gnb dd a {}
+
+/* viewBox */
+#viewBox {
+  float: left;
+  width: 750px; height: 350px;
+  background-color: #DD1B3E;
+}
+
+/* contBox */
+#contBox {
+  float: left;
+  width: 750px; height: 200px;
+  background-color: #80C68E;
+}
+
+/* noticeGalleryBox */
+#noticeGalleryBox {
+
+}
+
+/* bannerBox */
+#bannerBox {
+
+}
+
+/* sponsorBox */
+#sponsorBox {
+
+}
+
+/* footBox */
+#footBox {
+  float: left;
+  width: 750px; height: 100px;
+  background-color: #08CE94;
+}
