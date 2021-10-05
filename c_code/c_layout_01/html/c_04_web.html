@@ -9,6 +9,7 @@
 
   <script src="../js/base/modernizr-custom.js"></script>
 
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/src/c_04_web.css">
@@ -23,8 +24,8 @@
       <h1><a href="../a_00_content.html"><span>해운대 빛축제</span></a></h1>
       <nav id="gnb">
         <h2 class="blind">navigation</h2>
-        <ul>
-          <li>
+        <ul role="menu">
+          <li role="listitem">
           <dl>
             <dt><a href="#">이용안내</a></dt>
             <dd>
@@ -34,7 +35,7 @@
             </dd>
           </dl>
           </li>
-          <li>
+          <li role="listitem">
           <dl>
             <dt><a href="#">이벤트정보</a></dt>
             <dd>
@@ -44,7 +45,7 @@
             </dd>
           </dl>
           </li>
-          <li>
+          <li role="listitem">
           <dl>
             <dt><a href="#">프로그램</a></dt>
             <dd>
@@ -54,7 +55,7 @@
             </dd>
           </dl>
           </li>
-          <li>
+          <li role="listitem">
           <dl>
             <dt><a href="#">고객센터</a></dt>
             <dd>
@@ -76,7 +77,7 @@
         <h3 class="blind">notice and gallery</h3>
         <!-- ul.tab_title>li*2>button[type=button] -->
         <ul class="tab_title">
-          <li><button type="button">공지사항</button></li>
+          <li class="active"><button type="button">공지사항</button></li>
           <li><button type="button">갤러리</button></li>
         </ul>
         <div class="tab_content">

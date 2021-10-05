@@ -142,7 +142,8 @@ padding-bottom: 0;
     line-height: 25px; color: #575757;
   }
   .notice li:before {
-    content: "+"; color:#f06; margin-right: 3px;;
+    font-family: 'Font Awesome 5 Free'; font-weight: 900;
+    content: "\f1b0"; color:#f06; margin-right: 3px; font-size: 0.5rem;
   }
   .notice a:focus {
     outline: 0; 
