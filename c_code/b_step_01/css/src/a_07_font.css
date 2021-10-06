@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* a_07_font.css */
+
+/* design */
+#wrap {
+  width: 100%;
+  padding-bottom: 500px;
+  margin: auto;
+}
+
+p {
+  font-family: 'Ephesis', 'GmarketSansLight', 'GmarketSansMedium', 'Spoqa Han Sans Neo', cursive, sans-serif;
+  border: 1px solid #333;
+}
+
+p:nth-of-type(1) {
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.6;
+  letter-spacing: -1px;
+  text-align: justify;
+}
+p:nth-of-type(2) {
+  font-weight: 100;
+  line-height: 130%;
+  word-spacing: -3px;
+}
+p:nth-of-type(3) {
+  width: 300px;
+  font-size: 1.5em;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 

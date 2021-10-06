@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* c_05_web.css */
+
+/* design */
+#wrap {
+  margin: auto;
+}
+
+h1 {
+  background-color: var(--color-gray1);
+  
+}

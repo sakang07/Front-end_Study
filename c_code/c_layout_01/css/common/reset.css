@@ -2,7 +2,7 @@
 /* reset.css */
 html, body {
   margin: 0; padding: 0; border: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'GmarketSansLight', 'GmarketSansMedium', 'Noto Sans KR', sans-serif;
   box-sizing: border-box;
 }
 h1, h2, h3, h4, h5, h6, p, pre, address, ul, li, ol, dl, dt, dd, hr, img, div {
