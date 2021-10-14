@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/* 1014_photoshop1.css */
+
+/* design */
+#wrap {
+  position: relative;
+  width: 980px; height: auto;
+  margin: auto; padding-top: 30px;
+  background-color: #8FF5A5;
+}
+/* #headBox */
+#headBox {
+  float: left;
+  width: 249px; height: 709px;
+  padding: 56px 53px 0 43px;
+  background-color: #787878;
+}
+  #headBox > h1 {
+    width: 154px; height: 104px;
+  }
+  #headBox > h1 > a {
+    display: block;
+    width: 100%; height: 100%;
+    background-image: url(../../img/src/gcass_logo.png); background-size: contain; background-repeat: no-repeat; 
+    }
+
+  #gnb {
+    width: 100%; height: auto;
+  }
+    #gnb li {
+      width: 135px; height: 60px;
+      padding-left: 8px;
+      font-size: 22px; font-weight: 400; line-height: 80px;
+      text-transform: uppercase; color: #fff;
+      border-bottom: 3px solid #fff;
+    }
+    #gnb span:after,
+    #gnb span::after {
+      float: right;
+      content: "";
+      width: 10px; height: 10px;
+      margin-top: 32px; margin-right: 4px;
+      background-color: #fff;
+    }
+    #gnb li:hover {
+      background-clip: text;
+      color: #171717; font-weight: 700;
+    }
+
+
+  #unb {
+    margin-left: 22px;
+    width: 100px; height: auto;
+  }
+    #unb li {
+      width: auto; height: auto;
+      margin-top: 10px;
+    }
+      #unb li a {
+        display: block;
+        width: 110px; height: 110px;
+        border-radius: 100%;
+        background-color: #fff; color: #AFAFAF;
+        }
+          #unb li span {
+            font-size: 60px; line-height: 110px; 
+          }
+  #unb li:hover > a {
+    background-color: #888;
+  }
+  #unb li > a:focus {
+    background-color: #171717; color: #fff;
+  }
+
+/* #sideBox */
+#sideBox {
+  position: fixed; top: 0; left: 0; right: 0;
+  width: 980px; height: 30px;
+  margin: auto;
+  background: #898989;
+}
+  #sideBox ul {
+    float: right;
+    width: auto; height: auto;
+  }
+  #sideBox li {
+    float: left;
+    width: 95px; height: 30px;
+    color: #fff; text-align: center; line-height: 34px; text-transform: uppercase;
+    background-color: #898989;
+  }
+  #sideBox .home {
+    background-color: #898989;
+  }
+  #sideBox .study {
+    background-color: #545454;
+  }
+  #sideBox .education {
+    width: 245px;
+    color: #171717; text-align: left; padding-left: 18px;
+    background-color: #FFF306;
+  }
+    #sideBox .education:after,
+    #sideBox .education::after {
+      float: right;
+      content: "";
+      width: 56px; height: 1px;
+      margin-right: 44px; margin-top: 16px;
+      background-color: #171717;
+    }
+
+/* #contBox */
+#contBox {
+  float: right;
+  width: 731px; height: 709px;
+  background-color: #A8A8A8;
+}
+  .cont_area{
+
+  }
+
+/* #footBox */
+#footBox {
+  float: left;
+  width: 980px; height: 111px;
+  padding: 12px 42px 0; border: 1px solid #BCB5B9;
+  background-color: #fff;  
+}
+  #footBox h2 {
+    float: left;
+    width: 78px; height: 54px;
+  }
+  #footBox h2 > a {
+    display: block;
+    width: 100%; height: 100%;
+    background-image: url(../../img/src/gcass_sub_logo.png); background-size: contain; background-repeat: no-repeat; 
+  }
+
+  .link_icon {
+    float: left;
+    margin-top: 20px; margin-left: 46px;
+  }
+    .link_icon li {
+      float: left;
+    }
+    .link_icon li > a {
+      width: 100%; height: 100%;
+    }
+    .link_icon .location {
+      width: 34px; height: 34px;
+      margin-right: 10px;
+      background-image: url(../../img/src/gcass_location.png); background-size: contain; background-repeat: no-repeat;
+    }
+    .link_icon .facebook {
+      width: 34px; height: 34px;
+      background-image: url(../../img/src/gcass_fb.png); background-size: contain; background-repeat: no-repeat;
+    }
+
+  address {
+    float: left;
+    width: 310px; height: 34px;
+    margin-left: 30px; margin-top: 20px;
+    font-size: 14px; color: #505050; line-height: 1.4;
+  }
+  .link_block {
+    float: right;
+    width: 298px; height: 60px;
+    font-size: 14px; color: #adadad;
+  }
+    .link_block dl {
+      width: 100%; height: 100%;
+      line-height: 30px; color: #fff;
+    }
+      .link_block dt {
+        float: left;
+        width: 95px; height: 30px;
+        padding-left: 10px;
+        text-transform: capitalize;
+        background-color: #545454;
+      }
+      .link_block dt:after,
+      .link_block dt:after {
+        float: right;
+        content: "";
+        width: 8px; height: 9px;
+        margin-top: 10px; margin-right: 10px;
+        background-color: #fff;
+      }
+
+      .link_block dd {
+        float: right;
+        width: 202px; height: 30px;
+        padding-left: 4px;
+        background-color: #BBA602;
+      }
+      .link_block dd:last-of-type {
+        color: #7d7d7d;
+        background-color: #FFF306;
+      }
+  .link_block p {
+    margin-right: 4px; margin-top: 6px;
+    color: #adadad; font-size: 12px; text-align: right;
+  }
