@@ -98,8 +98,8 @@
   box-shadow: 5px 5px 5px #333;
 }
 .img_shadow_02 {
+  /* 그림자가 이미지 자체에 적용 */
   filter: drop-shadow(5px 5px 5px #333);
-
 }
 .img_shadow_03 {
   box-shadow: 5px 5px 5px #333;
