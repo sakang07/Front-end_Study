@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- b_03_form.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>b_03_form</title>
+
+  <!-- <link rel="stylesheet" href="../css/common/reset.css"> -->
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_03_form.css">
+
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+
+  <script src="../js/base/modernizr-custom.js"></script>
+</head>
+
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="../a_00_content.html">웹</a></h1>
+    <hr />
+    <h2>form</h2>
+    <p>무언가를 입력, 선택, 자료를 전송하게 만드는 기능을 가진 요소</p>
+    <p>양방향 전송 방식</p>
+    <p>검색, 로그인, 회원가입, 구매, 게시판...</p>
+
+    <ol>
+      <li>검색하기 위해 필요한 단어/문장을 작성(글을 작성할 수 있는 영역)</li>
+      <li>전송 버튼을 클릭(a는 data를 보내는 능력이 없다. data 전송 버튼)</li>
+      <li>데이터를 전송(어디로 보낼지, method: 공개(GET)/비공개(POST) 여부)</li>
+      <li>전송받은 곳에서 무언가 수행(backend)</li>
+      <li>수행에 대한 결과를 피드백</li>
+      <li>피드백 받은 결과를 도출</li>
+    </ol>
+
+    <hr />
+
+    <div class="content_input_area">
+      <form action="" method="POST">
+        <fieldset>
+          <legend>각 영역별 기능 구분</legend>
+          <label for="userName">이름</label>
+          <input type="text" id="userName" value="" name="userName" />
+
+          <label for="userGender">비밀번호</label>
+          <input type="password" id="userPw" value="" name="userPw" />
+
+          <label for="userOld">나이
+            <span class="blind">태어난 해를 기준으로 입력하세요</span>
+          </label>
+          <input type="text" id="userOld" value="" name="userOld" />
+
+          <input type="submit" value="확인" />
+          <!--
+            userName  : 홍길동
+            userGender: male
+            userOld   : 12
+          -->
+        </fieldset>
+        <fieldset>
+          <legend>각 영역별 기능 구분</legend>
+        </fieldset>
+        <fieldset>
+          <legend>각 영역별 기능 구분</legend>
+        </fieldset>
+        <fieldset>
+          <legend>각 영역별 기능 구분</legend>
+        </fieldset>
+      </form>
+    </div>
+
+  </div><!-- //#wrap -->
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>
