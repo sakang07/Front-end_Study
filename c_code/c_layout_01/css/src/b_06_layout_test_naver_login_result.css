@@ -39,7 +39,7 @@ fieldset {
   width: 100%; height: auto;
   margin: 0; padding: 0; border: 0;
   margin-bottom: 22px;
-  background-color: #ddf;
+  /* background-color: #ddf; */
 }
 fieldset:last-of-type {
   margin-bottom: 0;
@@ -63,27 +63,65 @@ fieldset:last-of-type {
     border-top-right-radius: 0;
   }
 
-.member_status {
-  height: 20px;
-}
+  .member > input {
+    float: right;
+    width: calc(100% - 30px); height: 100%;
+    border: 0; padding: 0; text-indent: 0.5rem; font-size: 1rem;
+  }
+  .member > label {
+    float: left;
+    width: 26px; height: 100%;
+    text-align: center; font-size: 1.1rem;
+    color: #aaa; line-height: 1.8;
+  }
+  .member input::placeholder {
+    color: #7a7;
+  }
+  .member input:focus + label {
+    color: #333;
+  }
+  .member input:focus {
+    background-color: #fff;
+    outline: 0;
+  }
+  .member_status {
+    height: 20px;
+  }
+    label[for="stateCheck"] {
+      font-size: 1rem;
+      color: #575757;
+    }
+    label[for="stateCheck"] > i {
+      font-size: 1.3rem; margin-right: 0.3rem;
+    }
+    #stateCheck:checked + label > i {
+      color: #373; font-weight: 700;
+    }
+
 .ok_btn {
   height: 60px;
 }
-
+  input[type="submit"] {
+    width: 100%; height: 60px;
+    border-radius: 0.5rem; border: 1px solid #373;
+    background-color: #7a7;
+    color: #fff; font-weight: 700; font-size: 1.2rem;
+    cursor: pointer;
+  }
 
 .member_more {
   text-align: center;
 }
-.member_more a {
-  margin-right: 0.5rem;
-}
-.member_more a:after {
-  content: "|";
-  margin-left: 0.5rem;
-}
-.member_more a:last-of-type {
-  margin-right: 0;
-}
-.member_more a:last-of-type:after {
-  display: none;
-}
+  .member_more a {
+    margin-right: 0.5rem;
+  }
+  .member_more a:after {
+    content: "|";
+    margin-left: 0.5rem;
+  }
+  .member_more a:last-of-type {
+    margin-right: 0;
+  }
+  .member_more a:last-of-type:after {
+    display: none;
+  }

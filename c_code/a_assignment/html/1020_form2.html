@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- 1020_form2.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1020_form2</title>
+
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/1020_form2.css">
+
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+
+  <script src="../js/base/modernizr-custom.js"></script>
+</head>
+
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="../a_00_content.html">NAVER</a></h1>
+    <h2 class="blind">회원가입</h2>
+    <div class="login_area">
+      <form action="#" method="POST">
+        <fieldset>
+          <legend class="blind">계정 정보 입력</legend>
+          <ul class="id_info">
+            <li>
+              <label for="idVal">아이디</label>
+              <input type="text" id="idVal" name="id__val" value="" maxlength="16">
+            </li>
+            <li>
+              <label for="pwVal">비밀번호</label>
+              <input type="password" id="pwVal" name="pw__val" value="" maxlength="16">
+            </li>
+            <li>
+              <label for="pwConfirm">비밀번호 재확인</label>
+              <input type="password" id="pwConfirm" name="pw__confirm" value="" maxlength="16">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend class="blind">개인 정보 입력</legend>
+          <ul class="personal_info">
+            <li>
+              <label for="nameVal">이름</label>
+              <input type="text" id="nameVal" name="name__val" value="">
+            </li>
+            <li class="clearfix">
+              <label for="birthYear">생년월일</label>
+              <input type="text" id="birthYear" name="birth__year" value="" placeholder="년(4자)">
+              <!-- <input type="text" id="birthMonth" name="birth__month" value=""> -->
+              <select name="birth__month" id="birthMonth">
+                <option value>월</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <input type="text" id="birthDay" name="birth__day" value="" placeholder="일">
+            </li>
+            <li>
+              <label for="sexVal">성별</label>
+              <!-- <input type="text" id="sexVal" name="sex__val" value=""> -->
+              <select name="sex__val" id="sexVal">
+                <option value>성별</option>
+                <option value="남자">남자</option>
+                <option value="여자">여자</option>
+                <option value="선택 안함">선택 안함</option>
+              </select>
+            </li>
+            <li>
+              <label for="otherEmail">본인 확인 이메일<span>(선택)</span></label>
+              <input type="email" id="otherEmail" name="other__email" value="" placeholder="선택입력" minlength="0">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend class="blind">휴대전화 인증</legend>
+          <ul class="certification_number">
+            <li>
+              <label for="interNum">휴대전화</label>
+              <!-- <input type="text" id="interNum" name="inter__num" value="" placeholder=""> -->
+              <select name="inter__num" id="interNum">
+                <option value>대한민국 +82</option>
+              </select>
+            </li>
+            <li>
+              <label for="phoneNum" class="blind"></label>
+              <input type="text" id="phoneNum" name="phone__num" value="" placeholder="전화번호 입력" maxlength="12">
+              <input type="submit" value="인증번호 받기">
+            </li>
+            <li>
+              <label for="cerNum" class="blind"></label>
+              <input type="text" id="cerNum" name="cer__num" value="" placeholder="인증번호 입력하세요" maxlength="6">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend class="blind">확인 버튼</legend>
+          <label for="signUp" class="blind"></label>
+          <input type="submit" id="signUp" value="가입하기">
+        </fieldset>
+      </form>
+    </div>
+
+  </div><!-- //#wrap -->
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>

@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>b_06_layout_test_naver_login_result</title>
 
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/src/b_06_layout_test_naver_login_result.css">
@@ -24,19 +26,41 @@
     <div class="part">
       <h2>로그인 페이지</h2>
       <div class="login_area">
+
+        <!-- form 시작 -->
         <form action="#" method="POST">
+          <!-- 아이디/비번 입력란 -->
           <fieldset class="login_part">
             <legend class="blind">회원 계정 입력란</legend>
-            <div class="member member_id"></div>
-            <div class="member member_pw"></div>
+            <!-- ID -->
+            <div class="member member_id">
+              <input type="text" value="" id="userId" name="user__id" placeholder="아이디" maxlength="16" />
+              <label for="userId"><i class="far fa-user"></i>
+                <span class="blind">사용자의 아이디를 입력하세요</span>
+              </label>
+            </div>
+            <!-- PW -->
+            <div class="member member_pw">
+              <input type="password" value="" id="userPw" name="user__pw" placeholder="비밀번호" maxlength="16" />
+              <label for="userPw"><i class="fas fa-lock"></i>
+                <span class="blind">사용자의 비밀번호를 입력하세요</span>
+              </label>
+            </div>
           </fieldset>
 
+          <!-- 로그인 상태 유지 -->
           <fieldset class="member_status">
             <legend class="blind">회원 계정 상태 유지 관리</legend>
+            <input type="checkbox" value="상태 유지 확인" id="stateCheck" name="state__check" class="blind">
+            <label for="stateCheck">
+              <i class="far fa-check-circle"></i>
+              <span>로그인 상태 유지</span></label>
           </fieldset>
 
+          <!-- 로그인 버튼 -->
           <fieldset class="ok_btn">
             <legend class="blind">로그인 확인</legend>
+            <input type="submit" value="로그인" />
           </fieldset>
         </form>
 
