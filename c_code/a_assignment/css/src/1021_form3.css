@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* 1021_form3.css */
+
+/* design */
+#wrap {
+  width: 100%; height: auto; min-height: 600px;
+  margin: auto; padding-top: 48px;
+}
+h1 {
+  width: 195px; height: 46px;
+  margin: auto; margin-bottom: 12px;
+  font-size: 46px; line-height: 16px;
+  /* background-color: #B6040B; */
+}
+.login_area {
+  width: 460px; height: auto; min-height: 600px;
+  margin: auto;
+  font-size: 14px;
+  /* background-color: #092AF1; */
+}
+
+/* user_part */
+.user_part li {
+  margin-bottom: 12px;
+}
+
+.user_part label {
+  float: left;
+  width: 48px; height: 48px;
+  border: 1px solid #ccc; border-right: 0;
+}
+.user_part label > i {
+  width: 100%; height: 100%;
+  font-size: 18px; line-height: 46px; text-align: center; color: #ccc;
+}
+.user_part input {
+  float: left;
+  width: calc(100% - 48px); height: 48px;
+  border: 1px solid #ccc;
+  text-indent: 14px;
+}
+.user_part li:hover {
+  border-bottom: 3px solid #0074e9;
+}
+.user_part input:focus {
+  outline: 0;
+  background-color: #dfe8f2;
+}
+
+.keep_login {
+  margin-bottom: 20px; line-height: 30px;
+}
+.keep_login label i {
+  font-weight: 400; color: #ddd; font-size: 24px; margin-right: 10px;
+}
+.keep_login input[id="keepCheck"]:checked +label > i {
+  font-weight: 800; color: #171717;
+}
+.keep_login label i:hover {
+  transform: rotateX(360deg);
+  transition: all 300ms linear;
+}
+.keep_login label { float: left; }
+.keep_login a { float: right; color: #0074e9; }
+
+.login_area hr { margin-top: 2px; margin-bottom: 14px; border-color: #ddd; }
+
+.login_area input[type="submit"] {
+  width: 100%; height: 48px;
+  border: 1px solid #ccc; border-radius: 3px;
+  margin-bottom: 12px;
+  font-weight: 700; font-size: 16px;
+}
+.btn_login input {
+  background-color: #0074e9; color: #fff; 
+}
+.btn_join input {
+  background-color: #fff; color: #0074e9;
+}
+.login_area input[type="submit"]:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px 10px #ddd;
+  transition: all 200ms linear;
+}
+
+.login_area p {
+  font-size: 10px; color: #777; text-align: center;
+}

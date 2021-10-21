@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- 1021_form3.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1021_form3</title>
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/1021_form3.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <!-- js -->
+  <script src="../js/common/modernizr-custom.js"></script>
+</head>
+
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="../a_00_content.html">coupang</a></h1>
+    <div class="login_area">
+      <form action="#" method="POST">
+        <fieldset class="user_part">
+          <legend class="blind">아이디 비밀번호 입력</legend>
+          <ul>
+            <li class="clearfix">
+              <label for="userId">
+                <span class="blind">아이디</span>
+                <i class="fas fa-lock"></i>
+              </label>
+              <input type="text" name="user__Id" id="userId" value="" placeholder="아이디(이메일)" maxlength="16" />
+            </li>
+            <li class="clearfix">
+              <label for="userPw">
+                <span class="blind">비밀번호</span>
+                <i class="fas fa-envelope"></i>
+              </label>
+              <input type="password" name="user__Pw" id="userPw" value="" placeholder="비밀번호" maxlength="16" />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="keep_login">
+          <legend class="blind">자동 로그인</legend>
+          <input type="checkbox" value="자동 로그인" id="keepCheck" name="keep__Check" class="blind" />
+          <label for="keepCheck">
+            <i class="far fa-check-square"></i>
+            <span>자동 로그인</span>
+          </label>
+          <a href="#">아이디(이메일)/비밀번호 찾기 <i class="fas fa-chevron-right"></i></a href="#">
+        </fieldset>
+        <fieldset class="btn_login">
+          <ul>
+            <li>
+              <legend class="blind">로그인 버튼</legend>
+              <input type="submit" value="로그인" />
+            </li>
+          </ul>
+        </fieldset>
+        <hr />
+        <fieldset class="btn_join">
+          <legend class="blind">회원가입 버튼</legend>
+          <input type="submit" value="회원가입" />
+        </fieldset>
+      </form>
+      <p>©Coupang Corp. All rights reserved.</p>
+    </div>
+
+  </div><!-- //#wrap -->
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>
