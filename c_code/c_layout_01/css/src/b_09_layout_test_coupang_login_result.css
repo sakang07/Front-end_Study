@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* b_09_layout_test_coupang_login_result.css */
+
+/* design */
+html, body { width: 100%; height: 100%; }
+
+#wrap {
+  width: 100%; height: auto; min-height: 100%;
+  margin: auto;
+}
+#headBox {
+  width: 520px; height: auto;
+  margin: auto; padding: 47px 30px 14px; margin-bottom: 14px;
+}
+h1 {
+  width: 190px; height: 94px; margin: auto; background-color: #c00;
+}
+h1 a {
+  display: block; width: 100%; height: 100%; text-align: center;
+}
+
+#loginBox {
+  width: 520px; height: auto; min-height: 220px;
+  margin: auto; padding: 0 30px;
+}
+
+.private {
+  width: 100%; height: 116px;
+}
+.private ul { width: 100%; }
+.private li { 
+  /* position: relative; */
+  overflow: hidden;
+  float: left;
+  width: 100%; height: 50px; margin-bottom: 14px;
+  border: 1px solid #ccc;
+}
+.private li:last-of-type {
+  margin-bottom: 0;
+}
+.private li label { 
+  /* position: absolute; top: 0; left: 0; z-index: 10; */
+  float: left;
+  width: 50px; height: 50px; 
+  border-right: 1px solid #ccc;
+  color: #575757; font-size: 1.2rem; text-align: center; line-height: 50px;
+  background-color: #ddd;
+}
+.private li input {
+  /* position: absolute; top: 0; left: 0; */
+  float: left;
+  width: calc(100% - 120px); height: 100%;
+  padding: 12px 10px;
+}
+.private li button {
+  /* position: absolute; top: 0; right: 0; */
+  float: right;
+  width: 50px; height: 50px;
+  font-size: 1.2rem; color: #575757;
+}
+
+.disable > i.fa-eye-slash { display: none;}
+.enable > i.fa-eye { display: none;}
+
+
+.check {
+  width: 100%; height: 50px;
+  padding-top: 0.75rem
+}
+.check label {float: left; cursor: pointer;}
+.check label i { 
+  float: left;
+  width: 20px; height: 20px; 
+  margin-right: 0.625rem; margin-top: 0.125rem;
+  border: 1px solid #777; 
+}
+
+#autoLogin:checked + label > i {
+  position: relative;
+  outline: 4px solid #0074e9;
+  background-color: #dff;
+  border-color: transparent;
+}
+#autoLogin + label > i {position: relative; overflow: hidden;}
+#autoLogin + label > i::before {
+  position: absolute; top: 110%; left: 0;
+  content: ""; display: block; width: 100%; height: 100%;
+  background-color: #fa0;
+  transition: all 300ms linear;
+}
+#autoLogin:checked + label > i::before {
+  top: 0;
+}
+.check a {float: right; color: #0074e9;}
+.check a i { font-weight: 700; }
+
+
+
+.login_btn .btn {
+  width: 100%; height: 54px;
+}
+.btn, .btn > button {
+  width: 100%; height: 100%;
+}
+.btn > button {
+  border-radius: 0.1rem;
+  color: #fff; font-size: 1.2rem; font-weight: 700;
+  background-color: #0074e9;
+  box-shadow: inset 0 -0.2rem 0 rgba(0,0,0,0.2);
+}
+
+#joinLinkBox {
+  width: 520px; height: auto;
+  margin: auto; margin-top: 18px; padding: 0 30px;
+  border-top: 1px solid #777;
+}
+.link {
+  width: 100%; height: 54px;
+  padding-top: 18px; box-sizing: content-box;
+  text-align: center; line-height: 54px; font-size: 1.2rem; 
+  color: #0073e9; font-weight: 700;
+} 
+.link > a { 
+  display: block; width: 100%; height: 100%; 
+  color: inherit;
+  border: 1px solid #777; border-bottom-width: 2px;
+  border-radius: 0.1rem;
+  background-color: #fff;
+}
+
+
+#footBox {
+  width: 520px; height: auto;
+  margin: auto; margin-top: 1rem; padding: 0 30px;
+  text-align: center;
+}
