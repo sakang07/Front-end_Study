@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/* 1022_form4.css */
+
+/* design */
+#wrap {
+  width: 100%; height: auto; min-height: 700px;
+}
+
+/* headBox */
+#headBox {
+  padding-top: 48px;
+}
+  h1 {
+      display: block;
+      width: auto; height: 46px;
+      margin: auto; margin-bottom: 20px;
+      font-size: 50px; line-height: 14px; text-align: center;
+    }
+
+/* contentBox */
+#contentBox {
+  width: 460px; height: auto; min-height: 500px;
+  margin: auto;
+  font-size: 0.8125rem;
+  /* background-color: #eee; */
+}
+  fieldset {
+    width: 100%; height: auto;
+    margin-bottom: 20px;
+  }
+  legend {
+    width: 100%; height: auto;
+    font-weight: 700;
+  }
+  input {
+    width: 100%; height: 100%;
+    font-weight: 700;
+  }
+  input::placeholder {
+    color: #BDBDBD;
+  }
+  
+  /* .personal_data */
+  .personal_data {
+    padding-bottom: 22px;
+    border-bottom: 1px solid #ddd;
+  }
+  .personal_data > legend {
+    margin-bottom: 30px;
+  }
+    .personal_data li {
+      width: 100%; height: 48px;
+      border: 1px solid #ccc; margin-bottom: 10px;
+    }
+    .personal_data li:last-of-type {
+      margin-bottom: 0;
+    }
+      .personal_data li input {
+        float: right;
+        width: calc(100% - 48px); height: 100%;
+      }
+      .personal_data li label {
+        float: left;
+        width: 48px; height: 100%;
+        border-right: 1px solid #ccc;
+        text-align: center;
+        background-color: #FAFAFA;
+      }
+      .personal_data li label > i {
+        font-size: 16px; line-height: 48px; color: #ccc;
+      }
+
+      /* hover, focus */
+      .personal_data li:hover {
+        border-bottom: 2px solid #1422e6;
+      }
+      .personal_data input:focus {
+        outline: 0;
+        background-color: #dde7f8;
+      }
+      .personal_data input:focus + label > i {
+        color: #171717;
+      }
+
+    /* .agreement_contract */
+    .agreement_contract {
+      margin-bottom: 30px;
+    }
+
+    .agreement_contract > legend {
+      margin-bottom: 12px;
+    }
+    .agreement_contract div {
+      width: auto; height: auto;
+      font-weight: 700; font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .agreement_contract div label > i {
+      float: left;
+      display: block;
+      width: 20px; height: 20px;
+      border: 1px solid #ccc;  border-radius: 4px;
+      background-color: #fff;
+    }
+    .agreement_contract div label > span {
+      float: left;
+      line-height: 24px;
+    }
+
+    .agreement_contract ul {
+      padding: 20px; border: 1px solid #ccc;
+    }
+
+    .agreement_contract li {
+      float: left;
+      width: 100%; height: auto;
+      margin-bottom: 4px;
+    }
+    .agreement_contract li:last-of-type {
+      margin-bottom: 0;
+    }
+    .agreement_contract li label {
+      float: left;
+      width: auto; height: auto;
+    }
+    .agreement_contract label::after,
+    .agreement_contract label:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+    .agreement_contract label > i {
+      float: left;
+      width: 20px; height: 20px;
+      border: 1px solid #ccc; border-radius: 4px; margin-top: 2px;
+      background-color: #fff;
+    }
+    .agreement_contract label > span {
+      float: left;
+      margin-left: 10px; line-height: 26px;
+    }
+    .agreement_contract input:checked + label > i {
+      background-color: #2F74E8;
+    }
+    .agreement_contract li > div {
+      float: right;
+      width: auto; height: auto;
+      margin-bottom: 0;
+    }
+
+    /* hover, focus */
+    .agreement_contract label:hover,
+    .agreement_contract div:hover {
+      transform: translate(2px, -2px);
+      transition: all 300ms linear;
+      color: #1422e6;
+    }
+    .agreement_contract input:checked + label > i,
+    .agreement_contract input:focus + label > i  {
+      background-color: #dde7f8;
+    }
+    .agreement_contract li > div > a:focus {
+      /* color: #1422e6; */
+      outline: 0;
+    }
+    .agreement_contract a:focus > i {
+      transform: scale(1.5);
+      transition: all 300ms linear;
+    }
+
+    /* .join_btn */
+    .btn_area input {
+      width: 460px; height: 52px;
+      border-radius: 3px;
+      font-weight: 700; font-size: 16px; color: #fff;
+      box-shadow: inset 0 -2px 0 #1A4990;
+      background-color: #2F74E8;
+    }
+
+    /* hover, focus */
+    .btn_area input:hover {
+      transform: scale(1.05);
+      /* box-shadow: 0 5px 10px #ddd; */
+      transition: all 300ms linear;
+    }
+    .btn_area input:focus {
+      outline: 0;
+      border: 3px solid #E7233D;
+    }
+
+/* footBox */
+#footBox {
+  margin-bottom: 50px;
+}
+#footBox p {
+  text-align: center; font-size: 11px; font-weight: 400; color: #555;
+}

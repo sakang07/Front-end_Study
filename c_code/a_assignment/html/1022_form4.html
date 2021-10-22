@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- 1022_form4.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1022_form4</title>
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/1022_form4.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <!-- js -->
+  <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous"></script>
+  <script src="../js/common/modernizr-custom.js"></script>
+</head>
+
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="../a_00_content.html">coupang</a></h1>
+    </header>
+    <article id="contentBox">
+      <h2 class="blind">로그인 영역</h2>
+      <div class="login_area">
+        <form action="#" method="POST">
+          <fieldset class="personal_data">
+            <legend>회원정보를 입력해주세요</legend>
+            <ul>
+              <li>
+                <input type="email" id="userId" name="user__Id" value="" placeholder="아이디(이메일)" maxlength="20" />
+                <label for="userId">
+                  <i class="fas fa-lock"></i>
+                  <span class="blind">아이디</span>
+                </label>
+              </li>
+              <li>
+                <input type="password" id="userPw" name="user__Pw" value="" placeholder="비밀번호" maxlength="16" />
+                <label for="userPw">
+                  <i class="fas fa-lock"></i>
+                  <span class="blind">비밀번호</span>
+                </label>
+              </li>
+              <li>
+                <input type="password" id="userPwCheck" name="user__Pw__Check" value="" placeholder="비밀번호 확인" maxlength="16" />
+                <label for="userPwCheck">
+                  <i class="fas fa-lock"></i>
+                  <span class="blind">비밀번호</span>
+                </label>
+              </li>
+              <li>
+                <input type="text" id="userName" name="user__Name" value="" placeholder="이름" maxlength="16" />
+                <label for="userName">
+                  <i class="fas fa-lock"></i>
+                  <span class="blind">이름</span>
+                </label>
+              </li>
+              <li>
+                <input type="tel" id="userTel" name="user__Tel" value="" placeholder="휴대폰 번호" maxlength="12" />
+                <label for="userTel">
+                  <i class="fas fa-lock"></i>
+                  <span class="blind">휴대폰 번호</span>
+                </label>
+              </li>
+            </ul>
+
+          </fieldset>
+          <fieldset class="agreement_contract">
+            <legend>쿠팡 서비스약관에 동의해주세요</legend>
+            <div class="clearfix">
+              <input class="blind" type="checkbox" id="agreeAll" name="agree__All" value="모두 동의합니다" />
+              <label for="agreeAll">
+                <i></i>
+                <span>모두 동의합니다.</span>
+              </label>
+            </div>
+            <ul class="clearfix">
+              <li>
+                <input class="blind" type="checkbox" id="agreementCheck1" name="agreement__Check" value="[필수] 만 14세 이상입니다" />
+                <label for="agreementCheck1">
+                  <i></i>
+                  <span>[필수] 만 14세 이상입니다</span>
+                </label>
+              </li>
+              <li>
+                <input class="blind" type="checkbox" id="agreementCheck2" name="agreement__Check" value="[필수] 쿠팡 이용약관 동의" />
+                <label for="agreementCheck2">
+                  <i></i>
+                  <span>[필수] 쿠팡 이용약관 동의</span>
+                </label>
+                <div><a href="#"><i class="fas fa-chevron-right"></i></a></div>
+              </li>
+              <li>
+                <input class="blind" type="checkbox" id="agreementCheck3" name="agreement__Check" value="[필수] 전자 금융거래 이용약관 동의" />
+                <label for="agreementCheck3">
+                  <i></i>
+                  <span>[필수] 전자 금융거래 이용약관 동의</span>
+                </label>
+                <div><a href="#"><i class="fas fa-chevron-right"></i></a></div>
+              </li>
+              <li>
+                <input class="blind" type="checkbox" id="agreementCheck4" name="agreement__Check" value="[필수] 개인정보 수집 및 동의" />
+                <label for="agreementCheck4">
+                  <i></i>
+                  <span>[필수] 개인정보 수집 및 동의</span>
+                </label>
+                <div><a href="#"><i class="fas fa-chevron-right"></i></a></div>
+              </li>
+              <li>
+                <input class="blind" type="checkbox" id="agreementCheck5" name="agreement__Check" value="[필수] 개인정보 제공 동의" />
+                <label for="agreementCheck5">
+                  <i></i>
+                  <span>[필수] 개인정보 제공 동의</span>
+                </label>
+                <div><a href="#"><i class="fas fa-chevron-right"></i></a></div>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="btn_area">
+            <legend class="blind">가입 버튼입니다</legend>
+            <label class="blind" for="joinBtn">동의하고 가입하기</label>
+            <input type="submit" name="join__Btn" id="joinBtn" value="동의하고 가입하기" />
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- modal window -->
+
+    </article>
+    <footer id="footBox">
+      <h2 class="blind">copyright</h2>
+      <p>©Coupang Corp. All rights reserved.</p>
+    </footer>
+
+  </div><!-- //#wrap -->
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>
