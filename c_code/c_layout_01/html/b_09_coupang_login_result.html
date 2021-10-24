@@ -1,55 +1,54 @@
 <!DOCTYPE html>
-<!-- b_09_layout_test_coupang_login_result.html -->
+<!-- b_09_coupang_login_result.html -->
 <html lang="ko-KR" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>b_09_layout_test_coupang_login_result</title>
+  <title>b_09_coupang_login_result</title>
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
-  <link rel="stylesheet" href="../css/src/b_09_layout_test_coupang_login_result.css">
+  <link rel="stylesheet" href="../css/src/b_09_coupang_login_result.css">
   <!-- favicon -->
   <link rel="shortcut icon" href="../favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="../favicon.png">
   <!-- js -->
-  <script src="../js/common/modernizr-custom.js"></script>
   <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous"></script>
+  <!-- <script src="../js/common/modernizr-custom.js"></script> -->
 </head>
-
 <body>
   <!-- layout -->
   <div id="wrap">
     <header id="headBox">
-      <h1><a href="../a_00_content.html">웹</a></h1>
+      <h1><a href="./a_content.html">웹</a></h1>
     </header>
 
     <article id="loginBox">
       <h2 class="blind">로그인 영역</h2>
       <div class="input_area">
         <form action="#" method="POST">
-          <fieldset class="private">
-            <legend class="blind">개인 로그인 정보 입력</legend>
+          <fieldset class="privite">
+            <legend class="blind">개인 로그인정보 입력</legend>
             <ul>
               <li>
                 <label for="userId">
-                  <i class="fas fa-envelope"></i>
+                  <i class="fas fa-envelope-open"></i>
                   <span class="blind">사용자 이메일 작성</span>
                 </label>
-                <input type="text" id="userId" name="user__Id" value="" />
+                <input type="text" id="userId" name="user__Id" value="">
               </li>
               <li>
                 <label for="userPw">
-                  <i class="fas fa-lock"></i>
-                  <span class="blind">사용자 이메일 작성</span>
+                  <i class="fas fa-unlock-alt"></i>
+                  <span class="blind">사용자 계정 비밀번호</span>
                 </label>
-                <input type="password" id="userPw" name="user__Pw" value="" />
+                <input type="password" id="userPw" name="user__Pw" value="">
                 <button type="button" title="문자 보이기" class="disable">
                   <i class="fas fa-eye"></i>
                   <i class="fas fa-eye-slash"></i>
@@ -60,26 +59,25 @@
           </fieldset>
 
           <fieldset class="check">
-            <legend class="blind">자동 로그인 체크 및 계정 찾기</legend>
-            <input class="blind" type="checkbox" name="" id="autoLogin" value="autoLogin">
+            <legend class="blind">자동로그인체크 및 계정찾기</legend>
+            <input class="blind" type="checkbox" name="auto__Login" id="autoLogin" value="autoLogin-true">
             <label for="autoLogin">
-              <i></i> <span>자동로그인</span>
-            </label>
+              <i></i> <span>자동로그인</span> </label>
             <a href="#">아이디(이메일)&sol;비밀번호 찾기 <i>&gt;</i></a>
           </fieldset>
 
           <fieldset class="login_btn">
-            <legend class="blind">로그인 처리</legend>
+            <legend class="blind">로그인처리</legend>
             <div class="btn">
-              <button type="button">로그인</button>
+              <button type="submit">로그<span>인</span></button>
             </div>
           </fieldset>
         </form>
       </div>
     </article>
-    <h2 class="blind">회원가입 링크</h2>
 
     <section id="joinLinkBox">
+      <h2 class="blind">회원가입 링크</h2>
       <div class="link">
         <a href="#">회원가입</a>
       </div>
@@ -87,9 +85,13 @@
 
     <footer id="footBox">
       <h2 class="blind">coupang info</h2>
-      <address class="blind"></address>
+      <address>
+        <p class="blind">주소</p>
+        <p class="blind">연락처</p>
+        <p>©Coupang Corp. All rights reserved.</p>
+      </address>
     </footer>
-  </div><!-- //#wrap -->
+  </div>
 
   <!-- script -->
   <script></script>
