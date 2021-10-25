@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* c_05_transition.css */
+
+/* design */
+#wrap {
+  width: 900px; height: auto;
+  margin: auto; background-color: #eee;
+  padding-bottom: 700px; box-sizing: content-box;
+}
+
+.part {
+  width: 95%; height: auto;
+  margin: auto; border: 1px solid #777;
+  padding: 0.5rem;
+}
+  .part ul {
+    width: 100%; height: auto;
+    background-color: #fdd;
+  }
+  .part li {
+    width: 100%; height: 150px;
+    margin-bottom: 50px; padding: 3rem;
+    border-bottom: 1px solid #0af;
+  }
+  .part span {
+    display: block;
+    width: 4rem; height: 4rem;
+    border-radius: 0.5rem;
+    text-align: center; line-height: 4rem;
+    background-color: #f73;
+  }
+  .tr1:hover li:nth-child(1) span {
+    transform: translateX(700px);
+    transition-property: transform;
+    transition-duration: 1000ms;
+    transition-timing-function: ease; 
+    /* 
+    ease: 점점 빠르다가 느리게(자연스럽게) 
+    ease-in: 점점 빠르게
+    ease-out: 점점 느리게
+    ease-in-out: 점점 빨라졌다가 느리게(시작/끝 속도가 같다)
+    linear: 동일한 속도로
+    cubic-bezier: 수치
+    */
+    transition-delay: 1000ms;
+  }
+  /* 
+  원래 요소에 적어두면 빠져나올때도 애니메이션 적용 
+  ,로 구분해두면 각자 효과가 적용됨.
+  */
+  .tr1 li:nth-child(2) span { 
+    transition-property: transform, background-color;
+    transition-duration: 2000ms, 1000ms;
+    transition-timing-function: ease-out;
+    transition-delay: 300ms, 1000ms;
+  }
+  .tr1:hover li:nth-child(2) span {
+    transform: translateX(500px) scale(1.2);
+    background-color: #f07; color: #fff;
+  }
+  .tr1 li:nth-child(3) span {
+    transition: all 2000ms linear 300ms;
+    /* transition: 선택자 구현시간 움직임 지연시간; */
+  }
+  .tr1:hover li:nth-child(3) span {
+    transform: translate(700px) rotate(360deg);
+    background-color: #06f; font-weight: 700;
+    color: #fff;
+  }
+  .tr1 li:nth-child(4) span {
+    transition: all 2000ms cubic-bezier(0,1.02,.97,.75) 300ms;
+  }
+  .tr1:hover li:nth-child(4) span {
+    transform: translate(700px) rotate(360deg);
+    background-color: #06f; font-weight: 700;
+    color: #fff;
+  }
+  .tr1 li:nth-child(5) span {
+    transition: all 2000ms cubic-bezier(0,1.02,.97,.75) 300ms; /* hover 벗어날 때 적용 */
+  }
+  .tr1:hover li:nth-child(5) span {
+    transform: translate(700px) rotate(360deg);
+    background-color: #06f; font-weight: 700;
+    color: #fff;
+    transition: all 500ms ease; /* hover 시에만 적용 */
+  }
+
+  .tran_ex {
+    position: relative; z-index: 100;
+    width: 400px; height: 600px;
+    margin: 5rem auto;
+    border: 1px solid #777;
+    padding: 1.2rem;
+    background-color: #ccc;
+  }
+  .div_line {
+    position: absolute; top: 0; left: 0; z-index: -1;
+    width: 100%; height: 100%;
+  }
+  .div_line span {
+    position: absolute;
+    display: block;
+    background-color: #0af;
+    transition: all 500ms linear;
+    --time: 500ms;
+  }
+    .div_line .line_01 { top: 0; left: 0; height: 1rem; width: 0; 
+      /* transition-delay: 1500ms;  */
+      transition-delay: calc( var(--time) * 3);}
+    .div_line .line_02 { top: 0; right: 0; width: 1rem; height: 0; 
+      /* transition-delay: 1000ms;  */
+      transition-delay: calc( var(--time) * 2);}
+    .div_line .line_03 { bottom: 0; right: 0; height: 1rem; width: 0; 
+      /* transition-delay: 500ms;  */
+      transition-delay: calc( var(--time) * 1);}
+    .div_line .line_04 { bottom: 0; left: 0; width: 1rem; height: 0; 
+      /* transition-delay: 0ms;  */
+      transition-delay: calc( var(--time) * 0);}
+
+    /* .div_line:hover span { transition: all 1000ms linear; } */
+
+    .div_line:hover .line_01 { width: 100%; transition-delay: 0ms; }
+    .div_line:hover .line_02 { height: 100%; transition-delay: 500ms;}
+    .div_line:hover .line_03 { width: 100%; transition-delay: 1000ms;}
+    .div_line:hover .line_04 { height: 100%; transition-delay: 1500ms;}
+    /* 우선순위 법칙: hover와 아닐때의 선택자를 똑같이 쓰지 않으면 적용되지 않는 경우가 있다
+    부모요소를 덧붙여 줬을 경우 똑같이 덧붙여 주어야 함. 
+    특히 여러 개의 요소에 시간을 다르게 배분시에 발생하는 현상.
+    .parent:hover .child {transition-delay: 0ms; } 이렇게 적었으면
+    .parent .child {transition-delay: 100ms; } 이렇게 .parent를 덧붙여 적어야 따로 적용됨.
+    또한 0초의 시간도 0ms 로 사용하는 쪽을 권장.
+    */
+
+    .hover_line {
+      width: 700px; height: 100px;
+      margin: 10rem auto;
+      background-color: #fcc;
+    }
+    .gage {
+      width: 0; height: 100%;
+      background-color: #05a;
+    }
+    .hover_line:hover .gage {
+      width: 100%;
+      transition: all 1000ms ease-out;
+      
+    }
+    .gage {
+      transition: all 1500ms linear 300ms;
+    }
