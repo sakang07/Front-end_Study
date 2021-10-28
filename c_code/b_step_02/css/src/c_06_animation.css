@@ -57,7 +57,7 @@
   animation-direction: alternate;
   animation-timing-function: ease;
   animation-fill-mode: both;
-  /* 움직임에 대한 시작과 마무리 처리 : backwards, both, forwarts */
+  /* 움직임에 대한 시작과 마무리 처리 : backwards, both, forwards */
   animation-delay: 3000ms;
 }
 .ani li:nth-child(3) > span {
