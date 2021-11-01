@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* mob_v.css */
+
+@media all and (max-width: 479px) {
+  #wrap { min-width: 320px; }
+  #headBox { height: 40px; }
+  #viewBox { height: 100vh; }
+  #contentBox { height: 480px; }
+    .new_area { height: 480px; }
+    .notice_area { display: none; }
+    .more_content { display: none; }
+  #footBox { height: 40px; }
+    #footBox h2 { display: none; }
+
+} /* @media all ~ 479px ============================== */

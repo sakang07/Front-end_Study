@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* pc.css */
+
+@media all and (min-width: 769px) {
+  #viewBox { height: 450px; }
+  #contBox > article { width: 25%; height: 600px; }
+  #infoBox { display: none; }
+  #socialBox { display: none; }
+  #footBox h2 { width: 100px; }
+
+}/* @media all 769px ~ ======================*/

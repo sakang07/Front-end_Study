@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* tablet.css */
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+  #viewBox { height: 300px; }
+  #contBox > article { width: 25%; height: 400px; }
+  #footBox h2 { width: 100px; }
+
+}/* @media all 481px ~ 768px =========================*/

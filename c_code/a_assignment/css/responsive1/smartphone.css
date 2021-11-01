@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* smartphone.css */
+
+@media all and (max-width: 480px) {
+  #headBox { position: relative; height: 100px; background-color: #a6e77a; }
+    h1 { position: absolute; right: 20px; top: 50%; 
+      transform: translateY(-50%); width: 45px; height: 45px;
+      background-color: #fff; }
+  #viewBox { height: 400px; }
+  #contBox > article { width: 50%; height: 200px; border: 1px solid #fff; }
+  #footBox h2 { width: 50%; margin: auto; }
+
+}/* @media all ~480px ===========================*/

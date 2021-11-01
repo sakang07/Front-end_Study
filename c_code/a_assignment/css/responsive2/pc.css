@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* pc.css */
+
+@media all and (min-width: 960px) {
+  #headBox { height: 60px; }
+    h1 { width: 250px; height: 45px; }
+    #gnb li { width: 50px; margin-right: 16px; }
+    #gnb li:last-of-type { width: 430px; }
+  #viewBox { height: 450px; }
+  #contentBox { max-width: 960px; height: 210px; margin: auto; }
+  #infoBox > div > div { float: left; width: calc(100% / 3); height: 540px; }
+  #footBox { height: 120px; }
+  
+} /* @media all 960px ~ ============================== */

@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* base.css */
+
+/* design */
+#wrap {
+  width: 100%;
+}
+.container {
+  position: relative;
+  width: 100%; max-width: 960px; height: 100%;
+  margin: auto;
+}
+  #headBox {
+    position: fixed; z-index: 100;
+    width: 100%; height: auto;
+    background-color: #333;
+    }
+    h1 {
+      position: absolute; top: 50%; left: 10px; transform: translateY(-50%);
+      display: block;
+      width: 100px; height: 30px;
+      background-color: #33b88f;
+    }
+    #gnb {
+      position: absolute; top: 50%; right: 10px; transform: translateY(-50%);
+    }
+    #gnb li {
+      float: left;
+      width: 25px; height: 25px;
+      margin-right: 6px;
+      background-color: #33b88f;
+    }
+    #gnb li:last-of-type {
+      width: 30px;
+      margin-right: 0;
+    }
+  #viewBox {
+    width: 100%; height: auto;
+    background-color: #ba7;
+  }
+  #contentBox {
+    width: 100%; height: auto;
+    padding: 24px 18px;
+    background-color: #547D77;
+  }
+    .title_shape {
+      width: 190px; height: 156px;
+      background-color: #33B88F;
+    }
+  #infoBox {
+    width:  100%; height: auto;
+  }
+    .new_area {
+      width: 100%;
+      background-color: #957de9;
+      }
+    .notice_area {
+      width: 100%;
+      background-color: #95ABE9;
+    }
+    .more_content {
+      width: 100%;
+      background-color: #95D2E9;
+    }
+  #footBox {
+    width: 100%; height: auto;
+    padding-top: 20px;
+    background-color: #333;
+  }
+    #footBox h2 {
+      width: 250px; height: 45px;
+      background-color: #33b88f;
+    }

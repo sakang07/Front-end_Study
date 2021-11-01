@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* tab.css */
+
+@media all and (min-width: 768px) and (max-width: 959px) {
+  #headBox { height: 60px; }
+    h1 { width: 174px; height: 42px; }
+    #gnb li { width: 36px; }
+    #gnb li:last-of-type { width: 45px; }
+  #viewBox { height: 450px; }
+  #contentBox { height: 210px; }
+  #infoBox > div > div { float: left; width: 50%; height: 540px; }
+    .more_content { display: none; }
+  #footBox { height: 120px; }
+    #footBox h2 { display: none; }
+  
+} /* @media all 768px ~ 959px ============================== */
