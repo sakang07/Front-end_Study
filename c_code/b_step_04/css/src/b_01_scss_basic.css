@@ -1,0 +1,34 @@
+/* b_01_scss_basic.css */
+#wrap {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 50, 0.5);
+  border: 10px solid #289c28;
+  color: #ffcc66;
+  outline: 5px solid #fa0;
+}
+
+#wrap > h1 {
+  width: 100%;
+  height: 100%;
+}
+
+#navBox {
+  width: 100%;
+  height: 100%;
+}
+
+#navBox ul {
+  width: 100%;
+  height: 100%;
+}
+
+#navBox li {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+#navBox li:last-child {
+  margin-bottom: 0;
+}

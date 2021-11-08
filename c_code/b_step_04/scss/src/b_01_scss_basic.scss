@@ -1,0 +1,55 @@
+// b_01_scss_basic.scss
+/* b_01_scss_basic.css */
+$white: #fff;
+$yellow: #fa0;
+$green: #32c532;
+$line: 5px;
+$style: solid;
+$border: $line $style $yellow;
+
+@mixin full($full: 100%) {
+  width: $full; height: $full;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($yellow + $green, 0.5);
+  border: 10px solid darken($green, 10%);
+  color: lighten($yellow, 20%);
+  outline: $border;
+}
+
+#wrap > h1 {
+  width: 100%;
+  height: 100%;
+}
+
+#navBox {
+  $full: 100%;
+  @include full();
+
+  & ul { @include full(); }
+  & li { @include full(); margin-bottom: 10px; 
+    &:last-child { margin-bottom: 0; }
+  } // li
+} // #navBox
+
+
+// SCSS -------------------------------
+// #wrap {
+//   width: 100%; height: 100%; background-color: #fca;
+
+//   & > h1 {
+//     width: 100%; height: 100%;
+//   }
+// }
+
+// Sass --------------------------------
+// #wrap
+//   width:100%
+//   height:100%
+//   background-color:#fac
+//   & > h1
+//     width:100%
+//     height:100%

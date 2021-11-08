@@ -1,0 +1,41 @@
+// 변수 처리
+$white: #fff;
+$yellow: #fa0;
+$green: #32c532;
+
+// 기존 css 변수 처리
+:root {
+  --color-white: #fff;
+  --color-yellow: #fa0;
+  --color-green-op: rgba(50, 200, 50, 0.5);
+}
+
+/* css 주석과 동일한 형식이므로 주석도 컴파일시 같이 변환 */
+// 이 주석 형식은 컴파일시 같이 변환되지 않는다
+
+body {
+  background-color: $yellow;
+  background-color: var(--color-yellow);
+}
+
+#wrap {
+  width: 90%; height: 100px;
+  margin: auto;
+  background-color: $white;
+  background-color: var(--color-white);
+}
+
+// 요소의 중첩 처리 : 4단계 이상 안쪽으로 처리하지 않기
+h1 {
+  width: 100%; height: 50px;
+  background-color: rgba($green, 0.5);
+  color: darken($white, 75%);
+
+  & > a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover { color: darken($yellow, 20%);}
+    &:focus { color: darken($yellow, 50%);}
+  }
+} // h1
