@@ -4,7 +4,17 @@
 // ------------------------------------------
 // color
 $yellow: #fa0;
-$blue: (#00f, #0af, #0df, #7af);    // list의 개념
+
+// list의 개념. ()는 꼭 필요는 없음.
+$blue: (#00f, #0af, #0df, #7af, #adf);
+
+// dictionary = map. 프로퍼티에 쌍따옴표("") 사용
+$psuedoCode: (
+  "hover": #87f, 
+  "focus": #4f3, 
+  "active": #fda, 
+  "selected": #dfd
+  );
 
 // ------------------------------------------
 
@@ -17,6 +27,137 @@ $blue: (#00f, #0af, #0df, #7af);    // list의 개념
   width: 100%; height: auto;
   & > li {
     width: 100%; 
-    background-color: nth($blue, 1);    // 변수로 지정된 색 중 두번째(1)
+
+    // 변수로 지정된 색 중 첫번째
+    background-color: nth($blue, 1);
+
+    // map-get($변수, 프로퍼티);로 value 호출
+    &:hover { background-color: map-get($psuedoCode, "hover"); } 
+    &:focus { background-color: map-get($psuedoCode, "focus"); }
+  } // li
+} // .list_area
+
+
+// #{변수명/숫자} 인터폴레이션 기법으로 내용을 담을 수 있게 처리하는 기법
+// .coffee_esspresso 클래스에 width: 100%
+$coffee: ("esspresso", "latte", "choco", "vanilla", "other");
+.coffee_#{nth($coffee, 1)} { width: 100%; }
+.coffee_#{2} { width: 100%; }
+
+// scss 반복문
+// for (반복변수 in 배열) {} : js 반복문
+
+// @for $i from 시작숫자 through 마무리숫자 {}
+// 시작숫자부터 마무리숫자까지 반복
+
+// @for $i from 시작숫자 to 마무리숫자 {}
+// 시작숫자부터 마무리숫자 바로 전까지 반복
+
+// 숫자 1부터 5까지 5번 반복 수행하면서 해당 숫자는 매개변수 $key에 임의 할당
+// length($변수) : 배열 길이
+@for $key from 1 through length($coffee) {
+  // .area_esspresso{} .area_latte{} .area_choco{} ... 의 형태로 .area의 글자에
+  // $coffee 변수 내부에 있는 이름을 각각 할당하기 위해 보관법인 #{}를 사용
+  // list 형식을 사용하기 위해서는 nth(변수명, 순번)
+
+  // $coffee: ("esspresso", "latte", "choco", "vanilla", "other");
+  // $blue: (#00f, #0af, #0df, #7af, #adf);
+  .area_#{ nth($coffee, $key)} {
+    width: $key * 10%;
+    background-color: nth($blue, $key);
   }
 }
+
+$device: 768;
+#viewBox {
+  width: 100%; height: 600 / $device * 100vw;
+}
+
+/* ------------------------------------------------ */
+
+// 변수 - $변수명 : 값
+// 중첩 - #box { > li {} }
+// @mixin / @include
+
+@mixin blind() {
+  display: block; overflow: hidden;
+  position: absolute; clip: rect(0 0 0 0); z-index: -1;
+  width: 0; height: 0;
+} // @mixin blind()
+
+@mixin bar() {
+  &:after, &::after {
+    content: ""; display: block; clear: both;
+  }
+} // @mixin bar()
+
+@mixin full() {
+  display: block; width: 100%; height: 100%;
+  // @mixin을 사용하면서 원본을 건드리지 않고 개별로 컨트롤할 때 
+  // @include full() {여기에 내용 써서 컨트롤}
+  @content;
+  // @mixin의 중첩 사용
+  & > span { @include blind(); }
+} // @mixin full() 
+
+// @content;의 사용 예시
+@mixin MakeCard() {
+  li {
+    float: left; width: 100%; height: 200px;
+    margin: 10px; background-color: $yellow;
+    & > a {
+        @include full(); @content; 
+      } // a
+  } // li
+} // @mixin MakeCard()
+
+.nav_area {
+  float: right;
+  width: 960px; height: auto;
+  & > li { 
+    float: left; width: auto; height: 30px;
+    a {
+      @include full() {background-color: $yellow};
+    } // a
+    // span {
+    //   @include blind();
+    // } // span
+  } // li
+  @include bar();
+} // .nav_area
+
+.card {
+  width: 100%; height: auto;
+  @include MakeCard(){
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    & > i { @include full };
+  };
+  @include bar();
+}
+
+// .list - $var: (v1, v2, v3); nth($var, 숫자)
+// map - $map: (a:v1, b:v2, c:v3); map-get($map, key);
+// @for - @for $i from startN through lastN {}
+// #{} - 숫자나 이름을 있는 형태 그대로 사용할 때 대치하는 기법(주로 선택자)
+// @mixin - 기능을 만들 때, @include - 기능을 사용할 때, @content - @mixin 내부에서 기능을 추가할 때
+
+@mixin mobile() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+#wrap {
+  width: 100%; min-width: 900px;
+  background-color: $yellow;
+  @include mobile {
+    min-width: auto; background-color: #adf;
+  }
+}
+
+
+// js에서의 $ 1.변수 2.${}
+// jQuery - $ : jQuery
+// Angular - $ : Angular
