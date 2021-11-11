@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* common.css */
-.clearfix::after, .clearfix:after {
+
+#wrap { height:auto; margin:auto; }
+
+.clearfix::after, 
+.clearfix:after {
   content: ""; display: block; clear: both; width: 100%; height: 0;
 }
 .blind_wrap a > span,
@@ -17,3 +21,12 @@
 .none {
   display: none;
 }
+.full_wrap a,
+.full_wrap button,
+.full {
+  display: block;
+  width: 100%; height: 100%; 
+}
+
+.bold { font-weight: 700; }
+.uppercase { text-transform: uppercase; }

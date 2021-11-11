@@ -8,7 +8,7 @@ $yellow: #fa0;
 // list의 개념. ()는 꼭 필요는 없음.
 $blue: (#00f, #0af, #0df, #7af, #adf);
 
-// dictionary = map. 프로퍼티에 쌍따옴표("") 사용
+// dictionary = map. 프로퍼티에 쌍따옴표("") 사용 권장
 $psuedoCode: (
   "hover": #87f, 
   "focus": #4f3, 
@@ -57,7 +57,7 @@ $coffee: ("esspresso", "latte", "choco", "vanilla", "other");
 // length($변수) : 배열 길이
 @for $key from 1 through length($coffee) {
   // .area_esspresso{} .area_latte{} .area_choco{} ... 의 형태로 .area의 글자에
-  // $coffee 변수 내부에 있는 이름을 각각 할당하기 위해 보관법인 #{}를 사용
+  // $coffee 변수 내부에 있는 이름을 각각 할당하기 위해 보간법인 #{}를 사용
   // list 형식을 사용하기 위해서는 nth(변수명, 순번)
 
   // $coffee: ("esspresso", "latte", "choco", "vanilla", "other");

@@ -31,11 +31,13 @@ console.log(d);
 
 var num = 4;
 var data = [];
+
+// 함수와 switch문의 중첩
 var atmFn = function (num) {
   switch (num) {
     case 1:
       data.push('현금 입금');
-      atmFn(2);
+      atmFn(2);   // 재귀함수 : 자기 자신을 내부에 다시 호출해서 사용할 수 있다
       break;
     case 2:
       data.push('통장 확인');
@@ -95,22 +97,22 @@ var setFn = function (selector) {
   var userStep = [];
   var storeSelectFn = function (selector) {
     switch (selector) {
-      case 'a':// 물건을 살경우
+      case 'a': // 물건을 살경우
         storeSelectFn('send');
         userStep.push('3. 카드 결재를한다.');
         storeSelectFn('return');
         break;
-      case 'b':// 공병을 팔경우 
+      case 'b': // 공병을 팔경우 
         storeSelectFn('send');
         userStep.push('3. 카드 입급을 받는다.');
         storeSelectFn('return');
         break;
-      case 'c':// 환불
+      case 'c': // 환불
         storeSelectFn('send');
         userStep.push('3. 카드 입금을 받는다(취소처리).');
         storeSelectFn('return');
         break;
-      case 'd':// 결재가 안될때
+      case 'd': // 결재가 안될때
         storeSelectFn('send');
         userStep.push('3. 결재 에러발생');
         storeSelectFn('return');
@@ -170,3 +172,16 @@ console.log(storeList);
 
 // *별첨 1 : setFn기능
 // *별첨 2 : setFn기능
+
+// -------------------------------------------
+
+// 코드 작성하는 요령
+// 1. 내용 로직
+// 2. 변수
+// 3. 함수(함수 호출시, 내부에서 다른 함수를 호출하기 위해서는 해당 함수가 먼저 작성되어야 한다)
+      // var cFn = function(){}
+      // var bFn = function(){cFn();}
+      // var aFn = function(){bFn();}
+
+// 4. 결과 도출을 위한 행동
+

@@ -19,3 +19,15 @@
   display: none;
 }
 #wrap { height:auto; margin:auto; }
+
+.full,
+.full_wrap a,
+.full_wrap button { 
+  display: block; width: 100%; height: 100%;
+}
+.bold { font-weight: 700; }
+.uppercase { text-transform: uppercase; }
+.none {
+  display: none;
+}
+#wrap { height:auto; margin:auto; }
