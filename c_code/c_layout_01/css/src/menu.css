@@ -14,7 +14,7 @@
 #headBox {
   width: 100%;
   height: 100px;
-  background-color: #5459DD;
+  background-color: #5459dd;
 }
 
 #headBox > div {
@@ -43,14 +43,14 @@ h1 {
 
 #contentBox {
   width: 100%;
-  height: 2020px;
-  background-color: #6D91C3;
+  height: auto;
+  background-color: #6d91c3;
 }
 
 .title_area {
   width: 100%;
   height: 250px;
-  padding: 92px;
+  padding-top: 92px;
   padding-bottom: 17px;
   background-color: #acf;
 }
@@ -71,6 +71,7 @@ h1 {
           align-items: flex-end;
   width: 100%;
   height: 57px;
+  margin-bottom: 16px;
   padding-bottom: 20px;
   border-bottom: 1px solid #aaa;
 }
@@ -80,9 +81,9 @@ h1 {
   height: auto;
 }
 
-.menu_content > div {
-  width: inherit;
-  height: inherit;
+.coffee {
+  width: 100%;
+  height: auto;
 }
 
 .menu_content ul {
@@ -101,13 +102,77 @@ h1 {
 .menu_content li {
   width: 240px;
   height: 350px;
-  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.menu_content li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: 1px solid #333;
-  margin: 5px;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 220px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background-image: url("../../img/menu/card_menu1.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.menu_thumb {
+  width: 100%;
+  height: auto;
+}
+
+.menu_thumb dt {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #757575;
+  color: #333;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.menu_thumb dd {
+  width: 100%;
+  height: auto;
+  font-size: 12px;
+  font-weight: 400;
+  color: #757575;
+}
+
+.tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #757575;
+  text-transform: uppercase;
+}
+
+.tag > span {
+  padding: 2px 5px;
+  border: 1px solid #757575;
+  border-radius: 3px;
+  margin-right: 4px;
 }
 
 #footBox {
   width: 100%;
   height: 450px;
-  background-color: #031D39;
+  background-color: #031d39;
 }

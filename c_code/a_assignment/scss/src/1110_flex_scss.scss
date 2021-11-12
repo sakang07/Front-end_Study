@@ -4,18 +4,22 @@
 // variable
 $white: #fff;
 $black: #171717;
-$green: #1A5D54;
+$green: #1a5d54;
 
 /* #headBox */
 #headBox {
-  width: 100%; height: 6.25rem;
-  padding-top: 1.25rem; padding-left: 10.625rem; padding-right: 10rem;
+  width: 100%;
+  height: 6.25rem;
+  padding-top: 1.25rem;
+  padding-left: 10.625rem;
+  padding-right: 10rem;
   display: flex;
   justify-content: space-between;
   background-color: $white;
   & h1 {
-    width: 7.5rem; height: 4.375rem;
-    background-color: #EE4954;
+    width: 7.5rem;
+    height: 4.375rem;
+    background-color: #ee4954;
   }
   & .nav_wrap {
     display: flex;
@@ -23,88 +27,102 @@ $green: #1A5D54;
     flex-direction: column-reverse;
   }
 } // #headBox
-  #gnb {
-    width: 33.125rem; height: 2.1875rem;
-    margin-top: 10px;
-    & ul {
-      display: flex;
-      justify-content: space-between;
-      align-content: center;
-    }
-    & li:before,
-    & li::before {
-      content: "";
-      display: inline-block;
-      width: 0.0625rem; height: 1.25rem;
-      margin-right: 2.25rem; 
-      background-color: $black;
-    }
-    & li:first-of-type:before,
-    & li:first-of-type::before {
-      margin-right: 0;
-      background-color: transparent;
-    }
-  } // #gnb
-  #unb {
-    width: 16.875rem; height: 1.625rem;
-    & ul {
-      display: flex;
-      justify-content: space-between;
-    }
-  } // #unb
+#gnb {
+  width: 33.125rem;
+  height: 2.1875rem;
+  margin-top: 10px;
+  & ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  & li:before,
+  & li::before {
+    content: "";
+    display: inline-block;
+    width: 0.0625rem;
+    height: 1.25rem;
+    margin-right: 2.25rem;
+    background-color: $black;
+  }
+  & li:first-of-type:before,
+  & li:first-of-type::before {
+    margin-right: 0;
+    background-color: transparent;
+  }
+} // #gnb
+#unb {
+  width: 16.875rem;
+  height: 1.625rem;
+  & ul {
+    display: flex;
+    justify-content: space-between;
+  }
+} // #unb
 
 /* #titleBox */
 #titleBox {
-  width: 100%; height: 250px;
+  width: 100%;
+  height: 250px;
   background-color: #aeb1d6;
 }
 
 /* #contBox */
 #contBox {
-  width: 100%; height: 126.25rem;
+  width: 100%;
+  height: 126.25rem;
   & .container {
-    width: 68.75rem; height: auto;
-    margin: auto; padding-top: 9.75rem;
+    width: 68.75rem;
+    height: auto;
+    margin: auto;
+    padding-top: 9.75rem;
   }
 } // #contBox
-  .cont_nav {
-    padding-bottom: 1.25rem; border-bottom: 0.0625rem solid $black;
-    & ul {
-      width: 50.375rem;
-      margin: auto;
-      display: flex;
-      justify-content: space-around;
-      align-content: center;
-    }
-    & li {
-      width: 7.875rem; height: 2.25rem;
-      text-align: center; line-height: 2.25rem;
-    }
-    & li:before,
-    & li::before {
-      content: "";
-      display: inline-block;
-      width: 0.0625rem; height: 1.25rem;
-      margin-right: 4.75rem; 
-      background-color: $black;
-    }
-    & li:first-of-type:before,
-    & li:first-of-type::before {
-      margin-right: 0;
-      background-color: transparent;
-    }
-    & .action {
-      border-radius: 4px; color: $white; font-weight: 700;
-      background-color: $green;
-    }
-  } // .cont_nav
-  .cont_content {
+.cont_nav {
+  padding-bottom: 1.25rem;
+  border-bottom: 0.0625rem solid $black;
+  & ul {
+    width: 50.375rem;
+    margin: auto;
     display: flex;
-    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
   }
+  & li {
+    width: 7.875rem;
+    height: 2.25rem;
+    text-align: center;
+    line-height: 2.25rem;
+  }
+  & li:before,
+  & li::before {
+    content: "";
+    display: inline-block;
+    width: 0.0625rem;
+    height: 1.25rem;
+    margin-right: 4.75rem;
+    background-color: $black;
+  }
+  & li:first-of-type:before,
+  & li:first-of-type::before {
+    margin-right: 0;
+    background-color: transparent;
+  }
+  & .action {
+    border-radius: 4px;
+    color: $white;
+    font-weight: 700;
+    background-color: $green;
+  }
+} // .cont_nav
+.cont_content {
+  display: flex;
+  flex-flow: row wrap;
+}
 
 /* #footBox */
 #footBox {
-  width: 100%; height: 450px;
+  width: 100%;
+  height: 450px;
   background-color: $black;
 }

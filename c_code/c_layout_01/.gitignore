@@ -1,1 +1,11 @@
-.DS_Store
+# .gitignore
+**/.DS_Store
+**/*.css.map
+**/prepros.config
+
+# -----------------------------------------
+# .gitignore가 실행되지 않을 때 처리
+# 1. $ git rm -r --cashed . 
+# 2. $ git add .
+# 3. $ git commit -m "fixed untracked files"
+# -----------------------------------------
