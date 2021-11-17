@@ -164,9 +164,6 @@ console.log(year, month, day);
 
 // ---------------------------------------------------------
 
-var array = [];
-var array2 = new Array();
-
 // 원시함수 - 생성자 함수, js를 기본 구성하는 함수. 형타입을 구성하게 하는 최소한의 세팅. Number(), String(), Boolean(), Function(), Object(), Array() ... 직접 사용이 불가.
 // 정의되어진 원시함수는 직접 사용이 불가능한 함수 - new 연산자 필요
 
@@ -197,8 +194,8 @@ console.log(afn.name); // Fn {name: 'xido', age: 10}
 console.log(afn.middle); 
 
 var ul = document.getElementsByTagName('ul')[0];
-var li = ul.getElementsByTagName('li'); 
-var li2 = ul.children;
+var li = ul.querySelectorAll('li'); 
+var li2 = ul.children; // 유사배열
 console.log( li, li2);
 
 // li2.forEach(function(d){
@@ -206,3 +203,5 @@ console.log( li, li2);
 // });
 
 // 유사배열이 존재하는 이유: li들의 요소를 단순 나열하여 배열로 처리, 객체로 모은형식
+
+
