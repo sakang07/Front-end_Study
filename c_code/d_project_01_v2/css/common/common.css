@@ -1,0 +1,53 @@
+/* common.css */
+.clearfix::after, .clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 0;
+}
+
+.blind_wrap a > span,
+.blind_wrap button > span,
+.blind {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.blind_wrap a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.none {
+  display: none;
+}
+
+#wrap {
+  margin: auto;
+}
+
+.full {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: #ddd;
+}
+
+/*# sourceMappingURL=common.css.map */

@@ -1,6 +1,252 @@
 /* main.scss */
-body {
+#wrap {
+  width: 100%;
+  height: auto;
+  min-height: 800px;
+  background-color: #ddd;
+}
+@media all and (max-width: 599px) {
+  #wrap {
+    min-width: 320px;
+    background-color: #fda;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #wrap {
+    background-color: #adf;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #wrap {
+    background-color: #fdf;
+  }
+}
+@media all and (min-width: 1440px) {
+  #wrap {
+    background-color: #dfd;
+  }
+}
+
+#headBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 50px;
+  height: 3.125rem;
   background-color: #fff;
+}
+h1 {
+  width: 60px;
+  height: 35px;
+  margin: auto;
+  background-color: #fff;
+}
+@media all and (max-width: 599px) {
+  h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8px;
+    margin: auto;
+    background-color: #dfa;
+  }
+  .head_area {
+    padding: 0;
+  }
+}
+
+.navi_inner {
+  width: 30px;
+  height: 35px;
+  float: left;
+  background-color: #1a5d54;
+}
+
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #headBox {
+    height: 50px;
+    height: 3.125rem;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #headBox {
+    height: 100px;
+    height: 6.25rem;
+  }
+}
+@media all and (min-width: 1440px) {
+  #headBox {
+    height: 100px;
+    height: 6.25rem;
+  }
+}
+
+#slideBox {
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  background-color: #dff;
+}
+@media all and (max-width: 599px) {
+  #slideBox {
+    padding-top: 50;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #slideBox {
+    height: 450px;
+    padding-top: 50;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #slideBox {
+    height: 600px;
+    padding-top: 100;
+  }
+}
+@media all and (min-width: 1440px) {
+  #slideBox {
+    height: 600px;
+    padding-top: 100;
+  }
+}
+
+#newBox {
+  width: 100%;
+  height: 100vh;
+  background-color: #add;
+}
+@media all and (max-width: 599px) {
+  #newBox {
+    min-height: 600px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #newBox {
+    height: 600px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #newBox {
+    height: 600px;
+  }
+}
+@media all and (min-width: 1440px) {
+  #newBox {
+    height: 600px;
+  }
+}
+
+#commercialBox {
+  width: 100%;
+  height: 580px;
+  background-color: #ffbd55;
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #commercialBox {
+    height: 350px;
+  }
+}
+@media all and (min-width: 1440px) {
+  #commercialBox {
+    height: 350px;
+  }
+}
+
+#bestBox {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+}
+@media all and (max-width: 599px) {
+  #bestBox {
+    min-height: 1500px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #bestBox {
+    min-height: 1200px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #bestBox {
+    min-height: 700px;
+  }
+}
+@media all and (min-width: 1440px) {
+  #bestBox {
+    min-height: 700px;
+  }
+}
+
+#galleryBox {
+  width: 100%;
+  height: auto;
+  background-color: #f7e9d3;
+}
+@media all and (max-width: 599px) {
+  #galleryBox {
+    min-height: 970px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #galleryBox {
+    min-height: 970px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #galleryBox {
+    height: 750px;
+  }
+}
+@media all and (min-width: 1440px) {
+  #galleryBox {
+    height: 750px;
+  }
+}
+
+#sponsorBox {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+}
+@media all and (max-width: 599px) {
+  #sponsorBox {
+    height: 400px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #sponsorBox {
+    height: 300px;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  #sponsorBox {
+    height: 100px;
+  }
+}
+@media all and (min-width: 1440px) {
+  #sponsorBox {
+    height: 100px;
+  }
+}
+
+#footBox {
+  width: 100%;
+  height: 450px;
+  background-color: #333333;
+}
+@media all and (max-width: 599px) {
+  #footBox {
+    height: 435px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #footBox {
+    height: 425px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

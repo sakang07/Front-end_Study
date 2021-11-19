@@ -1,0 +1,13 @@
+// newBox
+$newH: 600px;
+$newH2: 600px;
+
+#newBox {
+  width: 100%; height: 100vh;
+  background-color: #add;
+
+  @include mobile{ min-height:$newH; }
+  @include tablet{ height:$newH; }
+  @include laptop{ height:$newH2; } 
+  @include pc{ height:$newH2; }
+} // newBox
