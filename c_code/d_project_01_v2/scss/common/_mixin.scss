@@ -1,4 +1,5 @@
 // _mixin.scss
+@use "sass:math"; // math 기능을 쓴다는 선언
 
 // font-set
 @mixin font_set (){
@@ -22,6 +23,8 @@
 // size
 $imgPath: '../img/';
 
+// @mixin img와 @mixin full은 연결되어 있다(full 안에 img가 들어가 있음)
+// 먼저 img를 정의한 뒤에 img를 포함하고 있는 full을 정의해야 한다
 @mixin img($file, $repeat:no-repeat, $position:50% 50%, $size:initial) {
 	background : {
 		image: url(#{$imgPath}#{$file});
@@ -29,22 +32,34 @@ $imgPath: '../img/';
 		position: $position;
 		size: $size;
 	}
+	> span {
+		display: block;
+		position: absolute; z-index: -1; clip: rect(0 0 0 0);
+		width: 0; height: 0; overflow: hidden;
+	}
 	@content;
 }
-@mixin full($img:false, $file, $repeat, $position, $size) {
+@mixin full($file:false, $repeat:no-repeat, $position:50% 50%, $size:initial) {
 	display: block; width: 100%; height: 100%;
-	@if ($img) {
-		@include img() {
+	// $img가 초기값인 false일 경우에는 if문이 처리되지 않음
+	@if ($file) { 
+		@include img($file, $repeat, $position, $size) {
 			@content;
 		}
 	}
 }
+// a {
+// 	@include full('file.png');
+// 	@include full('file.png', $size:cover); // size에만 값을 넣고싶다
+	// @include full('file.png', $size:cover) { background-clip: border-box }; // content에 값 추가하기: 그냥 따로 써도 되지만 비슷한 속성일 때 묶어주면 가독성 up
+	// @include img('image_01.png');
+// }
 
 // unit
 $baseSize: 16;
 @mixin remUnit($name, $unit) {
 	#{$name}: #{$unit} + px;
-	#{$name}: #{$unit / $baseSize} + rem;
+	#{$name}: math.div($unit, $baseSize) + rem; // math 기능을 써야 에러가 나지 않는다.
 }
 
 // @media query --------------------------------------

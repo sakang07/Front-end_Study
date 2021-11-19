@@ -38,10 +38,10 @@
   background-color: #fff;
 }
 h1 {
+  position: relative;
+  z-index: 200;
   width: 60px;
   height: 35px;
-  margin: auto;
-  background-color: #fff;
 }
 @media all and (max-width: 599px) {
   h1 {
@@ -50,10 +50,42 @@ h1 {
     right: 0;
     top: 8px;
     margin: auto;
-    background-color: #dfa;
   }
   .head_area {
-    padding: 0;
+    padding: 8px 20px;
+  }
+}
+h1 > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../multi/img/base/logo_color.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+h1 > a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  h1 > a {
+    background-image: url(../../multi/img/base/logo_color_pc.png);
+  }
+}
+@media all and (max-width: 599px) {
+  #headBox.on a {
+    background-image: url(../../multi/img/base/logo_white.svg);
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #headBox.on a {
+    background-image: url(../../multi/img/base/logo_white.svg);
   }
 }
 
@@ -62,6 +94,64 @@ h1 {
   height: 35px;
   float: left;
   background-color: #1a5d54;
+}
+.navi_inner .nav_btn {
+  position: relative;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+}
+.navi_inner .nav_btn > button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../multi/img/base/menu_btn.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.navi_inner .nav_btn > button > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  .navi_inner .nav_btn {
+    display: none;
+  }
+}
+@media all and (min-width: 1440px) {
+  .navi_inner .nav_btn {
+    display: none;
+  }
+}
+@media all and (max-width: 599px) {
+  .navi_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    padding: 70px 60px 30px;
+    background-color: rgba(26, 93, 84, 0.7);
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  .navi_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    padding: 70px 60px 30px;
+    background-color: rgba(131, 76, 51, 0.7);
+  }
 }
 
 @media all and (min-width: 600px) and (max-width: 1023px) {
