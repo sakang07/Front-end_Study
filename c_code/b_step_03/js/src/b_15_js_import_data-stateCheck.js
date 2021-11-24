@@ -10,7 +10,7 @@
 // -----------------------------------------------------
 // 5. 문서를 찾아서 열어주기 .open(method-처리방식, url-연동주소, async-비동기처리허용여부)
 // 6. 문서 처리 .send()
-// 7. 
+/*
 var linkFn = function(url, method, async) {
   var http = new XMLHttpRequest(); // 1. 생성자함수 XMLHttpRequest();
   var stateMessage;
@@ -47,18 +47,43 @@ var linkFn = function(url, method, async) {
   http.open(method, url, async); // http 요청 초기화
   http.send(); // http 요청 전송
 }
-
+*/
 // ----------------------------------------------------
-
+/*
 var method = 'GET';
 var url = '../data/person_card.json';
 var async = true;
 
 linkFn(url, method, async);
-
+*/
 // ----------------------------------------------------
 
 // ES6 예제
 // fetch('../data/person_card.json').then(function(response){
 //   console.log(response.json());
 // })
+
+// ----------------------------------------------------
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET','../data/person_card.json', true);
+xhr.send();
+// 0.3초 후에 실행하는 메서드 setTimeout()
+setTimeout(function(){
+  // XMLHttpRequest 객체에 의해 전송된 HTTP 요청에 대한 응답 문자열을 자바스크립트 객체로 변환, 변수 data에 담는다.
+  var data = JSON.parse(xhr.responseText);
+  var dataList = [];
+  // 생성자 함수 SetFn 정의
+  var SetFn = function(title, link){
+    this.title = title;
+    this.url = link;
+  };
+  // forEach로 ...
+  data.forEach(function(value, index){
+    var title = value.title;
+    var url = value.link;
+    var obj = new SetFn(title, url);
+    dataList.push(obj);
+  });
+  console.log(dataList[0].title);
+}, 30);

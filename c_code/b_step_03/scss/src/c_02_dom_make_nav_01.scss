@@ -1,0 +1,27 @@
+// c_02_dom_make_nav_01.scss
+/* c_02_dom_make_nav_01.css */
+@import "../common/variable", "../common/mixin";
+
+#wrap { width: 100%; height: auto; min-height: 800px; }
+#headBox { 
+  display: flex; justify-content: space-between;
+  width: 100%; height: 56px; padding: 8px 10px; background-color: $color_gray_op; }
+h1 { width: 60px; margin-right: 10px; height: 40px; background-color: $color_primary_01;}
+.nav_area { width: calc(100% - 70px); height: 40px; background-color: #dfd;}
+.navi_btn { 
+  display: none; float: right; width: 40px; height: 40px;
+  & > button { width: 100%; height: 100%; background-color: $color_yellow_02;}
+}
+.navi_inner { 
+  display: flex; justify-content: space-between;
+  width: 100%; height: auto; min-height: 40px; background-color: $color_white_02; }
+
+.global_part { height: 40px; background-color: $color_primary_02; }
+.search_part { height: 40px; background-color: $color_yellow_01; }
+
+@include handhelds {
+  .navi_btn { display: block; }
+  .navi_inner { flex-direction: column; padding: 10px; }
+  .global_part { margin-bottom: 16px; }
+  .search_part {}
+}

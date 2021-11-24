@@ -51,7 +51,7 @@ fn(jQuery);
 
   // ------------------------------------------------------
 
-  // 네트워크 상태 처리
+  // 네트워크 상태 확인
   var jsonPath = '../data/person_card.json';
   $.ajax({
     url: jsonPath
