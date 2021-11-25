@@ -1,0 +1,48 @@
+/* c_04_dom_blind_btn.css */
+#wrap {
+  width: 90%;
+  height: auto;
+  min-height: 500px;
+  margin: auto;
+}
+
+#headBox {
+  border-bottom: 1px solid #333;
+}
+
+#contentBox {
+  width: 100%;
+  height: 500px;
+  margin-top: 5rem;
+  padding: 1rem;
+  border: 1px solid #57a;
+}
+#contentBox > .btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 1rem 0;
+}
+#contentBox > .btn > button {
+  padding: 1rem;
+  border: 1px solid #57a;
+  background-color: #fff;
+}
+#contentBox > .btn > button:hover {
+  background-color: rgba(85, 119, 170, 0.3);
+}
+#contentBox > .btn > button.on {
+  background-color: #57a;
+  color: #fff;
+  font-weight: 700;
+}
+#contentBox > .content_area {
+  width: 100%;
+  height: 350px;
+  padding: 1rem;
+  background-color: #fdd;
+}
+
+/*# sourceMappingURL=c_04_dom_blind_btn.css.map */

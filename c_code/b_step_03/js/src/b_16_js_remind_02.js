@@ -166,3 +166,87 @@ for (; i < 10; i++) {
 }
 // console.log( arrRan );
 // ---------------------------------------------------------------
+
+console.clear();
+
+
+// 구구단
+// 1: 이중 for 문
+var multitable = function () {
+  for (var i = 1; i < 10; i++) {
+    for (var j = 1; j < 10; j++) {
+      multitable = i * j
+      console.log(i + ' * ' + j + ' = ' + multitable);
+    }
+  }
+}
+multitable();
+
+// 2: 재귀함수
+var loop1 = function (i) {
+  var n;
+  for (n = 1; n < 10; n += 1) {
+    console.log(i + 'x' + n + '=' + (i * n))
+    if (i !== n) {
+      loop1(i);
+    }
+  }
+};
+
+console.clear();
+
+// 500부터 1초에 1씩 빠지는 카운트다운
+// setInterval : 일정시간마다, 끊어주는 조건이 필요(clearInterval)
+// setTimeout : 정해진 시간 뒤에(1회성)
+
+var startNum = 500;
+var timed    = 100;
+var endNum   = 250;
+var intervalFn;
+// ------------
+var $btn = document.querySelector('.btn');
+var $pSpan = document.querySelector('p>span')
+$pSpan.innerText = 'text'
+/*
+// if문을 활용해 기능을 수행하는 중간에는 중복 수행하지 않게 하기
+var goCheck = true; // 외부에 true 설정
+var countFn = function(start) {
+  if (goCheck){ // true시 if문 수행
+    goCheck = false; // 수행중에는 false이기 때문에 수행하지 않는다
+    // timed(100ms) 뒤에 1번 반복 수행
+    intervalFn = setInterval(function () {
+      $pSpan.innerText = start;
+      start--;
+      if (start <= endNum) {
+        $pSpan.innerText = endNum + ' 처리 완료';
+        clearInterval(intervalFn);
+        goCheck = true; // 모든 수행이 끝난 후 다시 true로 설정
+      }
+    }, timed);
+  }
+}
+
+$btn.addEventListener('click', function(e){
+  e.preventDefault();
+  countFn(startNum);
+});
+*/
+// ----------------------------------------
+
+var intervalCountFn = function(startNum){
+  var countNum = startNum;
+  setTimeout(function(){
+    $pSpan.innerText = countNum;
+    countNum--;
+    if(countNum > endNum) {
+      intervalCountFn(countNum);
+    } else {
+      $pSpan.innerText = countNum + '숫자 달성';
+    }
+  }, timed);
+}
+
+$btn.addEventListener('click', function(e){
+  e.preventDefault();
+  intervalCountFn(startNum);
+});
