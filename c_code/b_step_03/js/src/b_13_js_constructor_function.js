@@ -70,18 +70,23 @@ console.log(coffeeList[0].title);
 
 // ---------------------------------------------------------
 
-var ul = document.querySelectorAll('li');
-var list = ul.children; // 배열이 아닌 유사배열
+var nodeList = document.querySelectorAll('li'); // NodeList : 배열
+var ul = document.querySelector('ul'); // NodeList : 배열
+var list = ul.children; // HTMLCollection : 배열이 아닌 유사배열, 배열 메서드가 동작하지 않는다
 console.log(list);
 
 // prototype은 재설정, 추가 옵션을 주는 개념
 // 배열이 가지고 있는 본연의 기능 중 값을 배열 형식으로 처리하는 것
-// var listArr = Array.prototype.slice.apply(list);
-// console.log(listArr);
+var listArr = Array.prototype.slice(list);
+console.log(listArr);
 
 // list.forEach(function(data, index) {
 //   data.style.border = '1px solid #3df';
 // }) // TypeError : list가 배열이 아니라 forEach 사용 불가
+
+listArr.forEach(function(data, index) {
+  data.style.border = '1px solid #3df';
+}); // TypeError : list가 배열이 아니라 forEach 사용 불가
 
 // --------------------------------------------------------
 
@@ -121,7 +126,7 @@ console.log( coffee.store );
 
 // -----------------------------------------
 
-console.clear();
+// console.clear();
 
 // 1. this : window
 // 2. this : 일반함수 - window이지만 엄격모드에서는 undefined
