@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>c_06_dom_sample_03</title>
+  <title>c_09_dom_tab_menu</title>
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,12 +14,12 @@
   <!-- css -->
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
-  <link rel="stylesheet" href="../css/src/c_06_dom_sample_03.css">
+  <link rel="stylesheet" href="../css/src/c_09_dom_tab_menu.css">
   <!-- favicon -->
   <link rel="shortcut icon" href="../favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="../favicon.png">
   <!-- js -->
-  <script src="../js/common/modernizr-custom.js"></script>
+  <!-- <script src="../js/common/modernizr-custom.js"></script> -->
   <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous" defer></script>
 </head>
 
@@ -35,14 +35,14 @@
       <div class="tab_area">
         <div class="tab_title_inner">
           <ul>
-            <li><button type="button">tabs_title_01</button></li>
+            <li class="on"><button type="button">tabs_title_01</button></li>
             <li><button type="button">tabs_title_02</button></li>
             <li><button type="button">tabs_title_03</button></li>
             <li><button type="button">tabs_title_04</button></li>
           </ul>
         </div>
         <div class="tab_content_inner">
-          <div class="tab_content_part">
+          <div class="tab_content_part on">
             <h3>tab content title 01</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, accusamus!</p>
             <div class="link"><a href="#">자세히 보기</a></div>
@@ -68,8 +68,6 @@
   </div><!-- //#wrap -->
 
   <!-- script -->
-  <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <script src="../js/src/c_06_dom_sample_03.js"></script>
+  <script src="../js/src/c_09_dom_tab_menu.js"></script>
 </body>
 </html>
