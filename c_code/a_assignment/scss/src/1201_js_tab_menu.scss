@@ -1,0 +1,105 @@
+// 1201_js_tab_menu.scss
+/* 1201_js_tab_menu.css */
+
+@import "../common/mixin", "../common/variable";
+
+// wrap
+#wrap {
+  position: relative;
+  width: 100%; min-height: 400px; height: auto;
+  background-color: #43BB52;
+}
+
+// headBox
+#headBox {
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%; height: 100px;
+  background-color: #0CDBEE;
+
+  @at-root h1 {
+    width: 120px; height: 70px;
+    background-color: #556E56;
+    // @include full;
+  }
+
+  @at-root .nav_area {
+    width: 1110px; height: 70px;
+    display: flex; flex-direction: column-reverse; align-items: flex-end; justify-content: space-between;
+
+    @at-root .gnb_inner {
+      width: 530px; height: 35px;
+      background-color: #CDB772;
+    }// gnb_inner
+  
+    @at-root .unb_inner {
+      width: 270px; height: 26px;
+      background-color: #6CDD27;
+    }// unb_inner
+  }// .nav_area
+}// headBox
+
+// titleBox
+#titleBox {
+  width: 100%; height: 250px;
+  background-color: #113B9A;
+}
+
+// contBox
+#contBox {
+  width: 100%; height: 1700px;
+  padding: 193px 250px;
+  background-color: $color-white;
+
+  @at-root .tab_title {
+    display: flex;
+    & > li.on {
+      font-weight: 800; text-decoration: underline; color: $color_black_02; }
+    & > li {
+      width: 100px; height: 60px;
+      font-size: 20px; font-weight: 400; color: $color_light_gray_03; }
+  }
+  @at-root .tab_inner {
+    & > li.on { display: block; }
+    & > li {  display: none; 
+
+      @at-root .cont_inner {
+        width: 940px; height: auto;
+        & > li {
+          width: 100%; height: 200px;
+          margin-bottom: 30px;
+          background-color: #adf;
+
+          & > a { @include full; }
+          .modal {
+            display: none;
+            .modal_inner { 
+              position: fixed; top: 50%; left: 50%; z-index: 2000;
+              width: 1280px; height: 800px; 
+              padding: 40px;
+              border: 1px solid $color_light_gray_03; border-radius: 10px;
+              transform: translate(-50%, -50%);
+              background-color: $color-white; 
+              .close_btn {
+                position: absolute; top: 30px; right: 34px;
+                background-color: $color_black_01; color: $color-white;
+              }
+            }
+            .modal_bg {
+              position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 10;
+              width: 100%; height: 100%;
+              background-color: rgba($color_black_01, 0.3);
+            }
+
+          }
+
+        } // li
+      } // .cont_inner
+    } // li
+  } // .tab_inner
+}// #contBox
+
+// footBox
+#footBox {
+  width: 100%; height: 450px;
+  background-color: #6DB987;
+}

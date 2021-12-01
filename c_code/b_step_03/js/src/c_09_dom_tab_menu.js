@@ -64,7 +64,7 @@ $titleList.forEach(function(element, index){
     $contentPart[indexCheck].classList.add(optionName);
     */
     /*
-    // 3-2. li 요소에 .on 전부(for) 제거
+    // 3-2. li 요소에 .on 전부(for) 제거 : 권장X
     $titleList.forEach(function(el){
       el.classList.remove(optionName);
     });

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- 1201_js_tab_menu.html -->
+<html lang="ko-KR" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1201_js_tab_menu</title>
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/1201_js_tab_menu.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <!-- js -->
+  <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+  <!-- layout -->
+  <!-- Box > _area > _inner > _part > _content > _detail -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="../a_content.html">웹</a></h1>
+      <div class="nav_area">
+        <nav class="gnb_inner">
+          <h2>gnb_inner</h2>
+        </nav>
+        <nav class="unb_inner">
+          <h2>unb_inner</h2>
+        </nav>
+      </div>
+    </header>
+    <section id="titleBox">
+      <h2>titleBox</h2>
+    </section>
+    <section id="contBox">
+      <h2 class="blind">contBox</h2>
+      <ul class="tab_title">
+        <li><a href="#">2021년</a></li>
+        <li><a href="#">2020년</a></li>
+        <li><a href="#">2019년</a></li>
+        <li><a href="#">2018년</a></li>
+      </ul>
+      <ul class="tab_inner">
+        <li>
+          <ul class="cont_inner">
+            <li>
+              <a href="#">1번째</a>
+              <div class="modal">
+                <div class="modal_inner">
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore illo tempora repellat aspernatur eveniet eaque repudiandae atque cumque numquam! Sint!</p>
+                  <div class="close_btn">닫기</div>
+                </div>
+                <div class="modal_bg"></div>
+              </div>
+            </li>
+            <li><a href="#">banner_02</a></li>
+            <li><a href="#">banner_03</a></li>
+            <li><a href="#">banner_04</a></li>
+            <li><a href="#">banner_05</a></li>
+            <li><a href="#">banner_06</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="cont_inner">
+            <li><a href="#">2번째</a></li>
+            <li><a href="#">banner_02</a></li>
+            <li><a href="#">banner_03</a></li>
+            <li><a href="#">banner_04</a></li>
+            <li><a href="#">banner_05</a></li>
+            <li><a href="#">banner_06</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="cont_inner">
+            <li><a href="#">3번째</a></li>
+            <li><a href="#">banner_02</a></li>
+            <li><a href="#">banner_03</a></li>
+            <li><a href="#">banner_04</a></li>
+            <li><a href="#">banner_05</a></li>
+            <li><a href="#">banner_06</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="cont_inner">
+            <li><a href="#">4번째</a></li>
+            <li><a href="#">banner_02</a></li>
+            <li><a href="#">banner_03</a></li>
+            <li><a href="#">banner_04</a></li>
+            <li><a href="#">banner_05</a></li>
+            <li><a href="#">banner_06</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <footer id="footBox"></footer>
+
+  </div><!-- //#wrap -->
+
+  <!-- script -->
+  <script src="../js/src/1201_js_tab_menu.js"></script>
+</body>
+
+</html>
