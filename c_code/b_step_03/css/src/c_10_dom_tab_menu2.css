@@ -1,0 +1,205 @@
+#wrap {
+  width: 100%;
+  min-width: 1280px;
+  height: auto;
+  margin: auto;
+}
+
+#headBox {
+  width: 100%;
+  height: 6.25rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+#eventBox {
+  width: 100%;
+  height: auto;
+  min-height: 37.5rem;
+}
+
+.width_full {
+  width: 100%;
+  height: 15.625rem;
+  margin-bottom: 6.25rem;
+  padding: 1.6875rem 0;
+  background-color: #5783ac;
+}
+.title_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 940px;
+  height: 100%;
+  margin: auto;
+  color: #ffffff;
+}
+.title_area > h2 {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+.title_area > p {
+  font-size: 1.125rem;
+}
+
+.event_area {
+  width: 58.75rem;
+  height: auto;
+  min-height: 400px;
+  margin: auto;
+  margin-bottom: 6.25rem;
+  padding-bottom: 10rem;
+}
+.title_inner {
+  width: 100%;
+  height: 3.25rem;
+  margin-bottom: 3.125rem;
+  padding: 0.5rem;
+}
+.title_inner ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.title_inner li {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  color: #757575;
+  font-size: 22px;
+}
+.title_inner button {
+  width: auto;
+  height: 100%;
+  padding: 0 0.5rem;
+  color: inherit;
+}
+.title_inner li.on button {
+  border-bottom: 2px solid #1a5d54;
+  font-size: 28px;
+  color: #1a5d54;
+  font-weight: 700;
+}
+
+.content_inner {
+  width: 100%;
+  height: auto;
+}
+.content_inner .year_part {
+  display: none;
+}
+.content_inner .year_part.on {
+  display: block;
+}
+.content_inner .year_part > h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #757575;
+  border-bottom: 1px solid #757575;
+}
+
+.event_area .event_particle {
+  width: 100%;
+  height: auto;
+}
+.event_area .event_particle > li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 12.5rem;
+  margin-bottom: 1.875rem;
+  padding-top: 2.8125rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  padding-bottom: 2.25rem;
+  border-radius: 0.625rem;
+  background-color: #da9;
+}
+.event_area .event_particle a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: all 300ms ease;
+  background-image: url(../img/#);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event_area .event_particle a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.event_area .event_particle a h4 {
+  width: 100%;
+  height: auto;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-shadow: 2px 2px 3px rgba(51, 51, 51, 0.7);
+}
+.event_area .event_particle a p {
+  color: #ffffff;
+  font-size: 22px;
+  margin: 0.4rem 0;
+}
+.event_area .event_particle a .date > dd {
+  font-size: 22px;
+  color: #ffffff;
+}
+.event_area .event_particle a .event_check {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-self: center;
+}
+.event_area .event_particle a .event_check:before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: #ffffff;
+  border-radius: 100%;
+}
+.event_area .event_particle a .event_check > dt {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+.event_area .event_particle a .event_check > dd {
+  margin-left: 0.5rem;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.event_area .event_particle .end .event_check:before {
+  background-color: #c4c4c4;
+}
+.event_area .event_particle .end .event_check > dd {
+  color: #c4c4c4;
+}
+
+#footBox {
+  width: 100%;
+  height: 450px;
+  padding: 2rem;
+  background-color: #333333;
+}
+
+/*# sourceMappingURL=c_10_dom_tab_menu2.css.map */
