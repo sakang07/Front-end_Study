@@ -207,7 +207,7 @@ var intervalFn;
 var $btn = document.querySelector('.btn');
 var $pSpan = document.querySelector('p>span')
 $pSpan.innerText = 'text'
-/
+/*
 // if문을 활용해 기능을 수행하는 중간에는 중복 수행하지 않게 하기
 var goCheck = true; // 외부에 true 설정
 var countFn = function(start) {

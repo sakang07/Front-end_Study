@@ -113,41 +113,45 @@
   width: 100%;
   height: 12.5rem;
   margin-bottom: 1.875rem;
-  padding-top: 2.8125rem;
-  padding-left: 1.875rem;
-  padding-right: 1.875rem;
-  padding-bottom: 2.25rem;
-  border-radius: 0.625rem;
-  background-color: #da9;
+  border-radius: 0.5rem;
+  background-color: #da94;
 }
 .event_area .event_particle a {
   display: block;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
+  padding-top: 2.8125rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  padding-bottom: 2.25rem;
+  border-radius: 0.5rem;
   text-align: left;
   transition: all 300ms ease;
-  background-image: url(../img/#);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-}
-.event_area .event_particle a > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
+  background-color: #da9;
 }
 .event_area .event_particle a h4 {
+  position: relative;
   width: 100%;
   height: auto;
   font-weight: 700;
   font-size: 36px;
   text-transform: capitalize;
   color: #ffffff;
-  text-shadow: 2px 2px 3px rgba(51, 51, 51, 0.7);
+  text-shadow: 0.125rem 0.125rem 0.1875rem rgba(51, 51, 51, 0.7);
+}
+.event_area .event_particle a h4:before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  font-size: 4rem;
+  background-color: #ffffff;
 }
 .event_area .event_particle a p {
   color: #ffffff;
@@ -188,6 +192,28 @@
   font-weight: 700;
   color: #ffffff;
 }
+.event_area .event_particle a:focus {
+  transform: scale(1.05);
+  background-color: #1a5d54;
+}
+.event_area .event_particle a:hover {
+  transform: scale(1.05);
+  background-color: #da9;
+}
+.event_area .event_particle .end a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.7);
+  border-radius: 0.5rem;
+}
+.event_area .event_particle .end a:hover {
+  transform: scale(1);
+}
 .event_area .event_particle .end .event_check:before {
   background-color: #c4c4c4;
 }
@@ -199,6 +225,7 @@
   width: 100%;
   height: 450px;
   padding: 2rem;
+  color: #fff;
   background-color: #333333;
 }
 

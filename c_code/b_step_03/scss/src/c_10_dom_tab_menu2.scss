@@ -59,8 +59,9 @@
       position: relative;
       display: flex; flex-direction: column; justify-content: flex-end;
       width: 100%; height: 12.5rem; 
-      margin-bottom: 1.875rem; padding: { top: 2.8125rem; left: 1.875rem; right: 1.875rem; bottom: 2.25rem; } border-radius: 0.625rem; 
-      background-color: #da9; 
+      margin-bottom: 1.875rem; 
+      border-radius:0.5rem;
+      background-color: #da94; 
     } // li
     @import '../particle/event_list_particle';
   } //.event_particle
@@ -68,5 +69,6 @@
 
 #footBox {
   width: 100%; height: 450px; padding: 2rem;
+  color:#fff;
   background-color: $color_black_01;
 }

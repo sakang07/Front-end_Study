@@ -21,7 +21,7 @@ var conH         = getComputedStyle($contentArea).height;
 var conHResult   = parseInt(conH);
 var timed        = 500;
 var slideH;
-var permission = true;
+var permission   = true;
 // 처음부터 보이지 않게 하기 위한 처리(css에서 값을 가져오지 못하기에, js를 통해 값을 가져와서 파악후 display처리)
 // $contentArea.style.display = 'none'; 
 
