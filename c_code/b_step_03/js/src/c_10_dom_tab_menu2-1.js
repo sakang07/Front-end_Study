@@ -2,7 +2,13 @@
 
 // 삽입할 객체 리스트
 var data = [
-  { id: 'event_21042', title: 'summer flavor'}
+    { id: 'event_21042',
+    modalPath: '../event/y21042_data.json',
+    title: 'summer flavor',
+    narr: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis temporibus incidunt maiores qui ut iure!',
+    date: '2022. 01. 05 - 2022. 02. 15',
+    eventStatus: 'ready' // true/false/auto(별도값설정)로 설정해 주는 쪽이 편리
+  }
 ];
 
 // 탭메뉴 내용에 필요한 코드 형식 삽입하기
@@ -28,6 +34,7 @@ var $lastYear = $yearPart[0];
 
 // 기능 --------------------------------------------------
 // 0. 삽입할 요소
+/*
 var innerCode = '\
 <a href="#" data-id>\
   <h4 class="event_title"></h4>\
@@ -40,7 +47,7 @@ var innerCode = '\
     <dt>진행 상태</dt>\
     <dd>종료</dd>\
   </dl>\
-</a>';
+</a>';*/
 
 // 1. ul 생성
 // createElement는 요소를 생성하는 기능 - 생성만 하고 삽입은 별도
@@ -71,6 +78,7 @@ var $yearUl = $lastYear.querySelector('ul');
 var i = 0;
 var makeLiLen = data.length; // 생성할 li 갯수
 var $makeLi;
+/*
 for(var i = 0; i < makeLiLen; i++) {
   $makeLi = document.createElement('li');
   $makeLi.innerHTML = innerCode;
@@ -78,12 +86,59 @@ for(var i = 0; i < makeLiLen; i++) {
 }
 
 // 5. 생성한 내용 기준 li에 내용 첨부
-var selectI = 0;
-var $eventList = $yearUl.querySelectorAll('li');
+var selectI = 0; // index값 지정
+// 삽입할 li 선택
+var $eventList = $yearUl.querySelectorAll('li'); 
 
-var $selectorLi = $eventList[selectI];
+// li 내부 요소 선택
+var $selectorLi = $eventList[selectI]; // li의 순번
+var $dataSelect = data[selectI]; // 첨부할 순번의 data 위치
+
 var $selectorLink = $selectorLi.querySelector('a');
 var $selectorH4 = $selectorLi.querySelector('.event_title');
+var $selectorP = $selectorLi.querySelector('.event_narration');
+var $selectorDate = $selectorLi.querySelector('.date > dd');
+var $selectorStatus = $selectorLi.querySelector('.event_check');
 
-$selectorLink.setAttribute('data-id', 'data[selectI].id')
-$selectorH4.innerText = data[selectI].title;
+// li 내부 요소들에 data값 삽입
+$selectorLink.setAttribute('data-id', $dataSelect.id);
+$selectorLink.setAttribute('href', $dataSelect.modalPath);
+$selectorH4.innerText = $dataSelect.title;
+$selectorP.innerText = $dataSelect.narr;
+$selectorDate.innerText = $dataSelect.date;
+$selectorStatus.classList.add($dataSelect.eventStatus);
+*/
+
+// 줄여서 표현하기
+/* 문자열 안의 따옴표 표현하기(이스케이프 문자)
+var insert = ' more ';
+var insert2 = ' more2 ';
+var d = 'd' + insert + 'a' + insert2 + 't' + insert + 'a'; // d more a more2 t more a
+var d2 = 'd"at"a'; // d"at"a
+console.log('\'d\"' + insert + '\"' + insert2 + 'a\''); // 'd" more " more2 "a'
+*/
+var innerCode, dataSelct, $selectorStatus ;
+
+for(; i < makeLiLen; i++) {
+  $makeLi = document.createElement('li');
+  dataSelct = data[i];
+  
+  innerCode = '\
+    <a href="' + dataSelct.modalPath + '" data-id' + dataSelct.id + '>\
+    <h4 class="event_title">' + dataSelct.title + '</h4>\
+    <p class="event_narration">' + dataSelct.narr + '</p>\
+    <dl class="date">\
+    <dt class="blind">기간</dt>\
+    <dd>' + dataSelct.date + '</dd>\
+    </dl>\
+    <dl class="event_check success">\
+    <dt>진행 상태</dt>\
+    <dd>종료</dd>\
+    </dl>\
+    </a>';
+
+  $makeLi.innerHTML = innerCode;
+  $yearUl.append($makeLi);
+  $selectorStatus = $makeLi.querySelector('.event_check');
+  $selectorStatus.classList.add(dataSelct.eventStatus);
+}
