@@ -109,7 +109,7 @@ $selectorDate.innerText = $dataSelect.date;
 $selectorStatus.classList.add($dataSelect.eventStatus);
 */
 
-// 줄여서 표현하기
+// 줄여서 효율적으로 표현하기
 /* 문자열 안의 따옴표 표현하기(이스케이프 문자)
 var insert = ' more ';
 var insert2 = ' more2 ';
