@@ -74,39 +74,40 @@ $lastYear.append($makeUl);
 // 만든 요소 선택
 var $yearUl = $lastYear.querySelector('ul');
 
-// 4. li 여러개 생성하여 첨부
+// 4. data 객체의 갯수만큼 li 생성하여 html 삽입
 var i = 0;
 var makeLiLen = data.length; // 생성할 li 갯수
 var $makeLi;
 /*
 for(var i = 0; i < makeLiLen; i++) {
-  $makeLi = document.createElement('li');
-  $makeLi.innerHTML = innerCode;
-  $yearUl.append($makeLi);
+  $makeLi = document.createElement('li'); // 요소 생성
+  $makeLi.innerHTML = innerCode; // html 삽입
+  $yearUl.append($makeLi); // 생성한 요소 삽입
 }
 
-// 5. 생성한 내용 기준 li에 내용 첨부
+// 5. 생성한 html에 data 객체값 첨부
 var selectI = 0; // index값 지정
-// 삽입할 li 선택
+// 생성된 li 선택
 var $eventList = $yearUl.querySelectorAll('li'); 
 
 // li 내부 요소 선택
 var $selectorLi = $eventList[selectI]; // li의 순번
 var $dataSelect = data[selectI]; // 첨부할 순번의 data 위치
 
+// data를 담을 요소 선택
 var $selectorLink = $selectorLi.querySelector('a');
 var $selectorH4 = $selectorLi.querySelector('.event_title');
 var $selectorP = $selectorLi.querySelector('.event_narration');
 var $selectorDate = $selectorLi.querySelector('.date > dd');
 var $selectorStatus = $selectorLi.querySelector('.event_check');
 
-// li 내부 요소들에 data값 삽입
-$selectorLink.setAttribute('data-id', $dataSelect.id);
-$selectorLink.setAttribute('href', $dataSelect.modalPath);
-$selectorH4.innerText = $dataSelect.title;
-$selectorP.innerText = $dataSelect.narr;
-$selectorDate.innerText = $dataSelect.date;
-$selectorStatus.classList.add($dataSelect.eventStatus);
+// li 내부 선택한 요소들에 data값 삽입
+$selectorLink.setAttribute('data-id', $dataSelect.id); // <a data-id='event_21042'>
+$selectorLink.setAttribute('href', $dataSelect.modalPath); // <a href='../event/y21042_data.json'>
+$selectorH4.innerText = $dataSelect.title;// <h4 class="event_title">summer flavor</h4>
+$selectorP.innerText = $dataSelect.narr; // <p class="event_narration">Lorem ipsum...</p>
+$selectorDate.innerText = $dataSelect.date; // <dd>2022. 01. 05 - 2022. 02. 15</dd>
+$selectorStatus.classList.add($dataSelect.eventStatus); // <dl class="event_check ready">
 */
 
 // 줄여서 효율적으로 표현하기
@@ -123,6 +124,7 @@ for(; i < makeLiLen; i++) {
   $makeLi = document.createElement('li');
   dataSelct = data[i];
   
+  // html 코드를 정돈해서 data가 들어갈 자리를 변수화
   innerCode = '\
     <a href="' + dataSelct.modalPath + '" data-id' + dataSelct.id + '>\
     <h4 class="event_title">' + dataSelct.title + '</h4>\
@@ -137,8 +139,11 @@ for(; i < makeLiLen; i++) {
     </dl>\
     </a>';
 
+  // data를 삽입한 요소를 본문에 삽입
   $makeLi.innerHTML = innerCode;
   $yearUl.append($makeLi);
+
+  // 클래스 속성만 따로 부여
   $selectorStatus = $makeLi.querySelector('.event_check');
-  $selectorStatus.classList.add(dataSelct.eventStatus);
+  $selectorStatus.classList.add(dataSelct.eventStatus); // <dl class="event_check ready">
 }

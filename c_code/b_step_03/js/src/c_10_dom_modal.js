@@ -19,6 +19,9 @@ var elYearLi = elYearPart.querySelectorAll('li a');
 var elYearLiSelector = [].slice.call(elYearLi);
 // console.log(elYearLiSelector);
 
+var elModal;//         = elEventBox.querySelector('.event_modal');
+var elModalCloseBtn;//  = elModal.querySelector('.modal_close button');
+
 var OPTION_CHECK = 'on';
 var cardIndex = 0;
 
@@ -34,47 +37,52 @@ var fnModalClick = function(){
     elModal.classList.remove(OPTION_CHECK);
     elYearLiSelector[cardIndex].focus();
   });
-}
+};
 
-// modal 사라지게 하기, 클릭했던 li 위치로 돌아가기(접근성 제어)
-elModalCloseBtn.addEventListener('click', function(e){
-  e.preventDefault();
-  elModal.classList.remove(OPTION_CHECK);
-  elYearLiSelector[cardIndex].focus();
-});
+// data를 넣기 위해서는 가장 바깥쪽의 요소를 생성후 삽입해야 함
+var fnMakeModal = function() {
+  var makeEl = document.createElement('div');
+  makeEl.setAttribute('class', 'event_modal');
+  makeEl.innerHTML = MODAL_CODE;
+  elContentInner.after(makeEl);
+  
+  elModal = elEventBox.querySelector('.event_modal');
+  elModalCloseBtn = elModal.querySelector('.modal_close button');
+  
+  elModal.classList.add(OPTION_CHECK);
+  elModalCloseBtn.focus();
+}
 
 // ---------------------------------------------------------
 // 이벤트:
-// modal 나타나게 하기
+// modal 나타나게 하기, 닫기 버튼에 focus
 elYearLiSelector.forEach(function(element, index){
   element.addEventListener('click', function(e){
     e.preventDefault();
-    // console.log(this.getAttribute('data-href'));
+    // this.getAttribute('data-href'); // 차후 관련 주소를 통해 필요한 data를 처리.... 
     cardIndex = index; // 클릭한 요소의 순서를 외부에서도 알 수 있도록 빼준다
 
-    // data를 넣기 위해서는 가장 바깥쪽의 요소를 생성후 삽입해야 함
-    var makeEl = document.createElement('div');
-    makeEl.setAttribute('class', 'event_modal');
-    makeEl.innerHTML = MODAL_CODE;
-    elContentInner.after(makeEl);
-
-    var elModal = elEventBox.querySelector('.event_modal');
-    var elModalCloseBtn = elModal.querySelector('.modal_close button');
-
-    elModal.classList.add(OPTION_CHECK);
-    elModalCloseBtn.focus();
+    fnMakeModal();
     fnModalClick();
   });
 });
 
-
+// 닫기버튼을 인식하지 못하기에 함수화 처리해서 내부에서 생성시 기능을 처리할 수 있도록 함수로 제작하고 변수는 전역으로 빼주기!
 
 // ---------------------------------------------------------
 // ---------------------------------------------------------
 // 첨부: 
 
-var i = 0;
+// 간단하게 만든 타이밍 함수
+// 변수 i와 intervalFn을 함수 외부로 빼서 전역변수로 사용
+/*
+var i=0;
 var intervalFn;
-...
-
+var goFn =function(){
+  intervalFn = setInterval(function(){ i++ }, 100);
+}
+var stopFn = function(){
+  clearInterval(intervalFn );
+}
+*/
 // ---------------------------------------------------------
