@@ -165,7 +165,7 @@ console.log(footTypeArr);
   var fnA = function(){
     var a = 5; // fnA의 지역변수 a를 선언하고 5를 할당
     console.log(a); // 5
-    fnB(); // 100
+    fnB(); // 100 지역변수 a에 영향받지 않고 정의 시점에서의 a값을 출력
     console.log(a); // 5
   }
 

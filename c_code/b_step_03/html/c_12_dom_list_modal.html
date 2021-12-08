@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- index.html -->
+<!-- c_12_dom_list_modal.html -->
 <html lang="ko-KR" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index</title>
+  <title>c_12_dom_list_modal</title>
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,25 +14,38 @@
   <!-- css -->
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
-  <link rel="stylesheet" href="../css/src/index.css">
+  <link rel="stylesheet" href="../css/src/c_12_dom_list_modal.css">
   <!-- favicon -->
   <link rel="shortcut icon" href="../favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="../favicon.png">
   <!-- js -->
-  <script src="../js/common/modernizr-custom.js"></script>
+  <!-- <script src="../js/common/modernizr-custom.js"></script> -->
   <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
   <!-- layout -->
   <div id="wrap">
-    <h1><a href="../a_content.html">웹</a></h1>
+    <header id="headBox">
+      <h1><a href="./a_content.html">웹</a></h1>
+    </header>
 
+    <article id="contentBox">
+      <h2>list card</h2>
+      <div class="card_area">
+        <ul class="card_part">
+          <li><a href="#">이 내용을 복사해서 사용해 봅시다</a></li>
+        </ul>
+      </div>
+
+      <div class="card_modal">
+        <button type="button">닫기</button>
+      </div>
+
+    </article>
   </div><!-- //#wrap -->
 
   <!-- script -->
-  <script>
-    window.location = "./html/main.html";
-  </script>
+  <script src="../js/src/c_12_dom_list_modal.js"></script>
 </body>
 </html>
