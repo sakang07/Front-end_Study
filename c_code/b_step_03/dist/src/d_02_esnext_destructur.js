@@ -1,5 +1,5 @@
 // d_02_esnext_destructur.js
-// 비구조화할당(destructuring assignment)
+// 비구조화할당(destructuring assignment) 
 // 배열/객체 의 형태를 해체하여, 각각을 변수에담아 사용하는 표현식
 
 const fruits = ['banana', 'apple', 'graph', 'kiwi'];
@@ -106,4 +106,10 @@ const smartphone3 = {
 console.log(smartphone3); 
 
 //--------------------------------
+
+// let i = 0;
+// let permission = true;
+// let optionCheck = 'on';
+
+let [i, permission, optionCheck] = [0, true, 'on'];
 

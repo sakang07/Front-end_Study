@@ -1,5 +1,23 @@
 "use strict";
 
+require("core-js/modules/es.object.keys.js");
+
+require("core-js/modules/es.symbol.js");
+
+require("core-js/modules/es.array.filter.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.object.get-own-property-descriptor.js");
+
+require("core-js/modules/web.dom-collections.for-each.js");
+
+require("core-js/modules/es.object.get-own-property-descriptors.js");
+
+require("core-js/modules/es.array.concat.js");
+
+require("core-js/modules/es.array.slice.js");
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -7,7 +25,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // d_02_esnext_destructur.js
-// 비구조화할당(destructuring assignment)
+// 비구조화할당(destructuring assignment) 
 // 배열/객체 의 형태를 해체하여, 각각을 변수에담아 사용하는 표현식
 var fruits = ['banana', 'apple', 'graph', 'kiwi']; // const summer = fruits[0];
 // const apple = fruits[2];
@@ -27,15 +45,15 @@ var music = obj.music,
     keyboard = obj.keyboard; // --------------------
 
 {
-  var i = 0;
+  var _i = 0;
 } // 얕은복사 : 참조변수의 위치를 할당
 
 var arrFruits = fruits;
 var arr2Fruits = []; // ------------------------------------
 // 깊은 복사 수행1
 
-for (var _i = 0; _i < fruits.length; _i++) {
-  arr2Fruits[_i] = fruits[_i];
+for (var _i2 = 0; _i2 < fruits.length; _i2++) {
+  arr2Fruits[_i2] = fruits[_i2];
 }
 
 fruits[5] = 'orange';
@@ -107,3 +125,10 @@ var smartphone3 = _objectSpread(_objectSpread({}, samsungPhone), {}, {
 });
 
 console.log(smartphone3); //--------------------------------
+// let i = 0;
+// let permission = true;
+// let optionCheck = 'on';
+
+var i = 0,
+    permission = true,
+    optionCheck = 'on';
