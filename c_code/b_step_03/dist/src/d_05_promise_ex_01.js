@@ -21,18 +21,24 @@ const result = testBox.querySelector('.result > span');
 
 const fnRel = function(score){
   const _n = parseInt(score);
-  const sendData = new Promise(function(resolve, reject){
+  const sendData = function(resolve){
     const nanCheck = isNaN(_n) === false;
-    nanCheck ? resolve(_n) : reject('숫자를 다시 한 번 정확하게 입력해주세요.')
-  })
+    const numArea = _n >= 0 && _n <= 5;
+    if(nanCheck && numArea) {
+      resolve(_n);
+    };
+  }
   return sendData;
-}
+};
 
 const fnSubject = n => {
   let relData;
   fnRel(n)
+    // 값을 전달 받았을 때
     .then(response => {relData = response})
+    // 값에 에러가 났을때
     .catch(error => {relData = error})
+    // 값의 문제 여부를 떠나 최종 처리하고자 할 때
     .finally(rel => console.log(rel));
 }
 
@@ -43,4 +49,6 @@ btn.addEventListener('click', function(e){
   e.preventDefault();
   const [kr, en, mt] = [elKorean.value, elEnglish.value, elMath.value];
   fnSubject(kr);
+  fnSubject(en);
+  fnSubject(mt);
 });

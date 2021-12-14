@@ -137,15 +137,24 @@ var dataCalc = function dataCalc(ins) {
 };
 
 var fnNum = function fnNum(n) {
-  dataCalc('a').then(function (response) {
+  dataCalc(n).then(function (response) {
     return response * 5;
   }).then(function (response) {
     return response / 2;
   }).then(function (response) {
     return Math.pow(response, 2);
-  }).then(function () {
-    return console.log;
-  }).catch(function () {
-    return console.log;
+  }).then(function (response) {
+    return console.log(response);
+  }).catch(function (error) {
+    return console.log(error);
   }); // 625
 };
+
+var input = document.querySelector('#num');
+var btn = document.querySelector('button'); // 버튼 클릭시 input의 값을 파악하여 연산
+
+btn.addEventListener('click', function (e) {
+  e.preventDefault();
+  var _n = input.value;
+  fnNum(_n);
+});

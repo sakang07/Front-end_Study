@@ -1,0 +1,116 @@
+#headBox {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  margin: auto;
+}
+
+#viewBox {
+  width: 100%;
+  height: auto;
+}
+#viewBox .view_area {
+  position: relative;
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 500px;
+}
+#viewBox .view_area .view_btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+}
+#viewBox .view_area .view_btn ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 100%;
+}
+#viewBox .view_area .view_btn ul .next {
+  width: 100px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#viewBox .view_area .view_btn ul .next button {
+  width: 100%;
+  height: 100%;
+  font-size: inherit;
+  color: inherit;
+}
+#viewBox .view_area .view_btn ul .prev {
+  width: 100px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#viewBox .view_area .view_btn ul .prev button {
+  width: 100%;
+  height: 100%;
+  font-size: inherit;
+  color: inherit;
+}
+#viewBox .view_area .view_content {
+  width: 100%;
+  height: 100%;
+}
+#viewBox .view_area .view_content ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#viewBox .view_area .view_content ul li:nth-child(1) {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #83496D;
+}
+#viewBox .view_area .view_content ul li:nth-child(2) {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #BCB8B0;
+}
+#viewBox .view_area .view_content ul li:nth-child(3) {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #C56BB5;
+}
+#viewBox .view_area .view_content ul li:nth-child(4) {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4B5B3A;
+}
+#viewBox .view_area .view_content ul li.on {
+  display: block;
+  z-index: 10;
+}
