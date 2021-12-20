@@ -123,26 +123,26 @@
   height: 100%;
   box-sizing: border-box;
   padding-top: 2.8125rem;
-  padding-left: 1.875rem;
+  padding-left: 3.5rem;
   padding-right: 1.875rem;
   padding-bottom: 2.25rem;
-  border-radius: 0.5rem;
-  text-align: left;
-  transition: all 300ms ease;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   background-color: #da9;
+  transition: all 300ms ease;
+  text-align: left;
+  border-radius: 0.5rem;
 }
 .event_area .event_particle a h4 {
   position: relative;
   width: 100%;
   height: auto;
-  font-weight: 700;
   font-size: 36px;
+  font-weight: 700;
   text-transform: capitalize;
   color: #ffffff;
-  text-shadow: 0.125rem 0.125rem 0.1875rem rgba(51, 51, 51, 0.7);
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(51, 51, 51, 0.7);
 }
 .event_area .event_particle a h4:before {
   content: "";
@@ -151,8 +151,9 @@
   height: 1rem;
   border-radius: 1rem;
   margin-right: 1rem;
-  font-size: 4rem;
+  margin-left: -2rem;
   background-color: #ffffff;
+  font-size: 4rem;
 }
 .event_area .event_particle a p {
   color: #ffffff;
@@ -160,15 +161,15 @@
   margin: 0.4rem 0;
 }
 .event_area .event_particle a .date > dd {
-  font-size: 22px;
   color: #ffffff;
+  font-size: 22px;
 }
 .event_area .event_particle a .event_check {
   position: absolute;
   top: 1rem;
   right: 1rem;
   display: flex;
-  align-self: center;
+  align-items: center;
 }
 .event_area .event_particle a .event_check:before {
   content: "";
@@ -235,34 +236,34 @@
 }
 .modal_part {
   position: absolute;
+  z-index: 100;
   top: 50%;
   left: 50%;
-  z-index: 100;
   margin: auto;
   width: 80%;
   min-width: 800px;
   max-width: 1400px;
   height: auto;
-  min-height: 500px;
+  min-height: 400px;
   max-height: 700px;
   padding: 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0.3rem 0.3rem 1rem rgba(51, 51, 51, 0.5);
-  transform: translate(-50%, -50%);
   background-color: #fff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0.3rem 0.3rem 1rem rgba(51, 51, 51, 0.5);
 }
 .modal_part > h4 {
   width: 100%;
   height: auto;
-  padding-bottom: 0.7rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid #757575;
-  text-indent: 1rem;
+  text-indent: 0.5rem;
   color: #834c33;
   text-transform: uppercase;
   font-weight: 700;
 }
 .modal_part > h4:before {
-  content: "✦";
+  content: "●";
   color: #1a5d54;
   margin-right: 0.5rem;
   font-size: 0.7rem;
@@ -285,13 +286,13 @@
   position: absolute;
   top: 0.7rem;
   right: 1.3rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
 }
 .modal_part .modal_close > button {
   width: 100%;
   height: 100%;
-  border-radius: 5rem;
+  border-radius: 3rem;
   color: #ffffff;
   background-color: #1a5d54;
   font-size: 0.75rem;
@@ -311,7 +312,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(85, 85, 85, 0.5);
+  background-color: rgba(51, 51, 51, 0.5);
 }
 
 #footBox {
@@ -321,5 +322,3 @@
   color: #fff;
   background-color: #333333;
 }
-
-/*# sourceMappingURL=c_10_dom_tab_menu2.css.map */
