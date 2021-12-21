@@ -166,6 +166,7 @@ h1 {
 }
 
 #viewBox {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -173,6 +174,7 @@ h1 {
   height: auto;
   margin: 3rem auto;
   padding: 0.2rem;
+  padding-bottom: 4rem;
   border: 0.0625rem solid #333;
 }
 #viewBox h2 {
@@ -215,6 +217,58 @@ h1 {
 }
 #viewBox .slide_btn > .next {
   order: 1;
+}
+#viewBox .indicator {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 2rem;
+}
+#viewBox .indicator > .indicator_part {
+  display: flex;
+  width: auto;
+  height: 100%;
+  margin-right: 0.5rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  background-color: #fff;
+}
+#viewBox .indicator > .indicator_part > li {
+  width: 50px;
+  height: 100%;
+  margin-left: 0.5rem;
+  border-radius: 2rem;
+  background-color: #aff;
+}
+#viewBox .indicator > .indicator_part > li:first-of-type {
+  margin-left: 0;
+}
+#viewBox .indicator > .indicator_part > li.on {
+  width: 130px;
+  background-color: #a22;
+}
+#viewBox .indicator > .indicator_part a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+#viewBox .indicator .count_part {
+  width: auto;
+  height: 100%;
+  padding: 0.2rem 1rem;
+  text-align: right;
+  text-decoration: none;
+  background-color: #fa9;
+  border-radius: 5rem;
+}
+#viewBox .indicator .total_count {
+  font-weight: 700;
+  color: #07a;
 }
 #viewBox .slide_content {
   width: 100%;
