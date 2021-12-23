@@ -6,7 +6,8 @@
  * 2. js문서 별도로 제작 기능 수행
  */
 // ===========================================
-
+{
+  
 const path = '../temp/slide_movie.html';
 const body = document.querySelector('body');
 const viewBox = document.querySelector('#viewBox');
@@ -23,3 +24,5 @@ fetch(path)
     viewBox.innerHTML = element;
     fnScript();
   })
+
+}
