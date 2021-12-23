@@ -14,6 +14,7 @@ const viewBox = document.querySelector('#viewBox');
 const fnScript = () => {
   const mkScript = document.createElement('script');
   mkScript.src = '../dist/src/slide_movie.js';
+  body.prepend(mkScript);
 }
 
 fetch(path)
