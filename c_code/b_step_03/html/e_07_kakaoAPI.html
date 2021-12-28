@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- e_07_kakaoAPI.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e_07_kakaoAPI</title>
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <style>
+    #mapBox { width: 800px; height: 500px; margin: auto;}
+    #map { width: 100%; height: 100%;}
+  </style>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <!-- js -->
+  <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_content.html">웹</a></h1>
+
+    <div id="mapBox">
+      <h2>카카오 지도 이용</h2>
+      <div id="map">
+
+      </div>
+    </div>
+
+  </div><!-- //#wrap -->
+
+  <!-- script -->
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=98160ba6b903727f23230b366db28668&libraries=services,clusterer,drawing"></script>
+  <script>
+    const container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    const options = { //지도를 생성할 때 필요한 기본 옵션
+      center: new kakao.maps.LatLng(37.40192637377982, 126.9225538589732), //지도의 중심좌표.
+      level: 3 //지도의 레벨(확대, 축소 정도)
+    };
+
+    const map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+  </script>
+</body>
+</html>
