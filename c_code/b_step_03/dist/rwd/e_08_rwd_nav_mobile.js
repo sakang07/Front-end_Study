@@ -16,16 +16,16 @@
   const OPTION_NONE = 'none';
 
   // 이벤트
-  elNavBtn.addEventListener('click', (e)=>{
+  elNavBtn.addEventListener('click', (e) => {
     const ckOption = elNavBtn.classList.contains(OPTION_NAME);
-    if(!ckOption){
+    if (!ckOption) {
       elGnb.style.display = OPTION_VIEW;
       elNavBtn.classList.add(OPTION_NAME);
-    }else{
+    } else {
       elGnb.style.display = OPTION_NONE;
       elNavBtn.classList.remove(OPTION_NAME);
     }
-  }); 
+  });
   // elNavBtn.children[0].addEventListener('focus', (e)=>{
   //   elNavBtn.classList.add(OPTION_NAME);
   //   if(ckOption){
