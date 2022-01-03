@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- d_13_class.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>d_13_class</title>
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/d_13_class.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <!-- js -->
+  <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="./a_content.html">js-웹</a></h1>
+    </header>
+    
+    <main class="temp">
+
+    </main>
+
+    <article class="formBox">
+      <form action="#" method="get">
+        <fieldset>
+          <legend>member</legend>
+          <div class="login_area">
+            <div class="input_id">
+              <label for="userId">id</label>       
+              <input type="text" value="" id="userId" name="user__Id" />
+            </div>
+            <div class="input_pw">
+              <label for="userPw">pw</label>       
+              <input type="password" value="" id="userPw" name="user__Pw" />
+              <button type="button" class="pw_view">
+                <span class="blind">임시 비번보기</span>
+                <span area-hidden="true">i</span>
+              </button>
+            </div>
+            <div class="check_remember">
+              <label for="userRemember">remember</label> 
+              <input type="checkbox" value="id 기억" id="userRemember" 
+              name="user__Remember" />
+            </div>
+          </div>
+          <div class="send"><button type="submit">전송</button></div>
+        </fieldset>
+      </form>
+    </article>
+    <footer id="footBox">
+      <h2>footer</h2>
+    </footer>
+  </div>
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- <script src="../dist/src/d_13_class.js"></script> -->
+  <!-- <script src="../dist/src/d_13_class2.js"></script> -->
+  <!-- <script src="../dist/src/d_13_class3.js"></script> -->
+  <script src="../dist/src/d_13_class4.js"></script>
+  <script src="../dist/src/d_13_insertHTML.js"></script>
+</body>
+</html>
