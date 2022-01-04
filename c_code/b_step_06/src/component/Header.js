@@ -1,15 +1,12 @@
-// Header.js
+import Navigation from './Navigation';
+import '../style/Header.scss'
 
-function Header() {
-  const myName = 'react';
-  const h1Style = {color:'#f50', textTransform:'uppercase'}
-
+export default function Header(props){
+  
   return (
     <header id="headBox">
-      <h1 style={h1Style}>Hello World</h1>
-      <p style={{color:'#fa0'}}>{myName}란</p>
+      <h1>{props.heading}</h1>
+      <Navigation />      
     </header>
-  )
+    )
 }
-
-export default Header;

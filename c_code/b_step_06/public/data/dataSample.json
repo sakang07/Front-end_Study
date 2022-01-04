@@ -1,0 +1,12 @@
+[
+  {"id": "a_001", "title": "Nicaragua", "content": "1787 Aweopu Parkway", "color": "#6D63DB"},
+  {"id": "a_002", "title": "American Samoa", "content": "1264 Kenwi Heights", "color": "#BB3A7C"},
+  {"id": "a_003", "title": "Congo - Brazzaville", "content": "904 Vozcu Mill", "color": "#E02E5E"},
+  {"id": "a_004", "title": "Belarus", "content": "777 Malon Loop", "color": "#EECC5F"},
+  {"id": "a_005", "title": "Gambia", "content": "201 Ujbaf Mill", "color": "#84DADA"},
+  {"id": "a_006", "title": "Vanuatu", "content": "517 Abipu Point", "color": "#DD7C66"},
+  {"id": "a_007", "title": "Ghana", "content": "1904 Icieka Court", "color": "#3534BB"},
+  {"id": "a_008", "title": "Vatican City", "content": "351 Fobi Park", "color": "#6FF086"},
+  {"id": "a_009", "title": "Puerto Rico", "content": "1808 Jumfa Heights", "color": "#B478EE"},
+  {"id": "a_010", "title": "Liberia", "content": "528 Amiiw Glen", "color": "#B7FD9B"}
+]
