@@ -1,30 +1,22 @@
-import {useState} from 'react';
-import {MdFavorite} from 'react-icons/md';
+import { MdFavorite } from 'react-icons/md';
+import { useState } from 'react';
 import '../style/ConBox.scss';
+
 
 export default function ConBox(){
 
-  const favArr = ['Normal', 'Good']
+  const favArr = ['Normal', 'Good'];
   const colorArr = [
-    {color: '#ddd', fontSize: '1.5rem'},
-    {color: '#f33', fontSize: '1.5rem'}
+    {color:'#ddd', fontSize:'1.5rem'},
+    {color:'#f33', fontSize:'1.5rem'},
   ];
-
   const [fav, setFav] = useState(0);
-
-  const fnFavorite = () => { 
-    setFav(fav === 0 ? 1 : 0);
-  };
-
+  const fnFavorite = ()=>{ setFav( !fav ? 1 : 0  ) };
   const [number, setNumber] = useState(0);
-  const fnIncr = () => {
-    setNumber(number + 1)
-  };
-  const fnDecr = () => {
-    setNumber(number <= 0 ? 0 : number - 1);
-  };
+  const fnIncr = ()=>{ setNumber(number + 1) };
+  const fnDecr = ()=>{ setNumber(number <= 0 ? 0 : number -1 ) };
 
-
+  
   return (
     <article id="conBox">
       <h2>article</h2>
@@ -36,7 +28,7 @@ export default function ConBox(){
         </dl>
         <div className='btn'>
           <button type="button" onClick={fnFavorite}>좋아요</button>
-          <span style={colorArr[fav]}>{favArr[fav]}<MdFavorite /></span>
+          <span style={colorArr[fav]}>{favArr[fav]} <MdFavorite /></span>
         </div>
         <div className='btn'>
           <button type="button" onClick={fnIncr}>+1</button>
