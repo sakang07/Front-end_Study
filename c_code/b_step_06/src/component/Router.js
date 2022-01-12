@@ -2,6 +2,7 @@ import {Routes, Route} from 'react-router-dom';
 import Main from './Main';
 import Review from './Review';
 import CardList from './CardList';
+import Product from './Product';
 
 export default function Router(){
   return(   

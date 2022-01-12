@@ -1,0 +1,23 @@
+// Product.scss
+
+#product {
+  width: 1280px; height: auto;
+  padding: 100px 60px 100px; margin: auto;
+  background-color: #eee;
+
+
+  h2 {
+    font-size: 32px; font-weight: 700;
+    margin-bottom: 18px;
+  }
+
+  p {
+    font-size: 18px; line-height: 1.6;
+    margin-bottom: 80px;
+  }
+
+  hr {
+    width: 90px;
+    border: 2px solid #000; margin: auto; margin-bottom: 36px;
+  }
+}

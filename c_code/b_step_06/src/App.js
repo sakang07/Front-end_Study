@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import RouterPage from './router/RouterPage';
+import Product from './component/Product';
 import './App.css';
 
 function App() {
