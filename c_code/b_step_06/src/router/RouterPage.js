@@ -1,9 +1,11 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Main from '../page/Main';
-// import Company from '../page/Company';
 import Product from '../component/Product';
-import {Manual, Person, Rule, Etc} from '../page/Company';
+import Review from '../component/Review';
+import CardList from '../component/CardList';
+import Event from '../component/Event';
+import {Manual, Person, Rule} from '../page/Company';
 import NotFound from '../component/NotFound.js';
 
 export default function RouterPage() {
@@ -13,10 +15,13 @@ export default function RouterPage() {
       <Route path="" element={<Main />} />
       <Route path="/" element={<Main />} />
       <Route path="/main" element={<Main />} />
+      <Route path="/review" element={<Review />} />
+      <Route path="/cardList" element={<CardList />} />
       <Route path="/manual" element={<Manual />} />
       <Route path="/person" element={<Person />} />
       <Route path="/rule" element={<Rule />} />
       <Route path="/product" element={<Product />} />
+      <Route path="/event" element={<Event />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )

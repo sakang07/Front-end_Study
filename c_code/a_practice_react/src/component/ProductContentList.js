@@ -12,7 +12,7 @@ function ProductContentList (props) {
         {/* <img src=""></img> */}
       </figure>
       <dl>
-        <dt>{props.pageTitle}</dt>
+        <dt>{props.data.pageTitle}</dt>
         <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.di</dd>
       </dl>
       <button>more</button>

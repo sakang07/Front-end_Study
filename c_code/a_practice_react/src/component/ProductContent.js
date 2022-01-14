@@ -21,8 +21,7 @@ function ProductContent () {
         {
           cardData.map(
             (data, index) => 
-              <ProductContentList data={data}
-                                  key={index} />
+              <ProductContentList key={index} data={data}/>
             )
         }
       </ul>
