@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- 0302_js_todo_list.html -->
+<html lang="ko-KR" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0302_js_todo_list</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/common/reset.css" />
+    <link rel="stylesheet" href="../css/common/common.css" />
+    <link rel="stylesheet" href="../css/src/0302_js_todo_list.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../favicon.png" />
+    <!-- js -->
+    <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous" defer></script>
+    <script src="../js/0302_js_todo_list.js" defer></script>
+  </head>
+
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+      <header id="headBox">
+        <h1><a href="./a_content.html">header</a></h1>
+      </header>
+
+      <main id="todoBox">
+        <h2>todo list</h2>
+        <div class="todo_input">
+          <h3 class="blind">todo 입력</h3>
+          <form action="#" method="POST">
+            <fieldset>
+              <legend class="blind">input box</legend>
+              <label for="todoInput">오늘의 할 일</label>
+              <input type="text" id="todoInput" name="todo__Input" value="" />
+            </fieldset>
+            <fieldset>
+              <legend class="blind">send button</legend>
+              <button class="btn" type="button">보내기</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="todo_print">
+          <h3 class="blind">todo 출력</h3>
+          <form action="#" method="POST">
+            <ul>
+              <li></li>
+            </ul>
+
+            <!-- <fieldset>
+              <legend class="blind">print box 01</legend>
+              <input type="checkbox" name="todo__Print__01" id="todoPrint-01" value="" />
+              <label for="todoPrint-01">print 01</label>
+            </fieldset>
+            <fieldset>
+              <legend class="blind">print box 02</legend>
+              <input type="checkbox" name="todo__Print__02" id="todoPrint-02" value="" />
+              <label for="todoPrint-02">print 02</label>
+            </fieldset>
+            <fieldset>
+              <legend class="blind">print box 03</legend>
+              <input type="checkbox" name="todo__Print__03" id="todoPrint-03" value="" />
+              <label for="todoPrint-03">print 03</label>
+            </fieldset> -->
+          </form>
+        </div>
+      </main>
+    </div>
+    <!-- //#wrap -->
+  </body>
+</html>
